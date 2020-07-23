@@ -1,0 +1,147 @@
+html,
+body {
+    /* Блочная модель */
+    margin: 0;
+    padding: 0;
+    /* Типографика */
+    font-family: 'Arial';
+    font-size: 24px;
+    line-height: 33px;
+    color: #333;
+    /* Оформление */  
+    background-color: #f1f1f1;
+}
+
+ul {
+
+    /* Блочная модель */
+    padding: 0;
+    margin: 0;
+    /* Типографика */
+    list-style: none;
+}
+
+.main {
+    /* Блочная модель */
+    padding-top: 80px;
+    padding-bottom: 80px;
+    /* Оформление */
+    background-color: #F0F3FF;
+}
+.contaner {
+    /* Блочная модель */
+    width: 1240px;
+    height: auto;
+    margin: 0 auto;
+    padding: 100px 100px 60px 100px;
+    border: 1px solid #000;
+    border-radius: 16px;
+    /* Оформление */
+    background-color: #fff;  
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.12);
+    
+}
+
+.search {
+    /* Блочная модель */
+    display: flex;
+    margin-top: 49px;
+    align-items: center;
+}
+.search-block1 {
+    /* Блочная модель */
+    display: flex;
+    align-items: center;
+}
+.search-block2 {
+    /* Блочная модель */
+    display: flex;
+    align-items: center;
+}
+
+.search-form {
+    /* Блочная модель */
+    padding: 9px 51px 8px 22px;
+    margin-left: 20px;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    
+}
+
+.search-months {
+    /* Блочная модель */
+    margin-left: 20px;
+}
+
+.cards {
+    /* Блочная модель */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.card {
+    /* Позиционирование */
+    position: relative;
+    /* Блочная модель */
+    width: 600px;
+    height: 400px;
+    margin-bottom: 40px;
+    border-radius: 6px;
+    /* Оформление */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-title {
+    /* Позиционирование */
+    position: absolute;
+    left: 40px;
+    top: 292px;
+    /* Типографика */
+    font-size: 48px;
+    line-height: 66px;
+    color: #fff;
+}
+
+.card-number,
+.full-number {
+    /* Позиционирование */
+    position: absolute;
+    /* Типографика */
+    font-size: 48px;
+    line-height: 66px;
+    color:#fff;   
+}
+
+.card-number{
+    /* Позиционирование */
+    top: 40px;
+    left: 40px;
+    /* Блочная модель */
+    padding: 9px 13px 5px 13px;
+    border: 2px solid #fff;
+    border-radius: 6px;    
+}
+
+.full-number {
+    /* Позиционирование */
+    top: 50px;
+    left: 108px;
+    /* Блочная модель */
+    display: none;
+    
+}
+
+.card-img {
+    /* Позиционирование */
+    position: absolute;
+    top: 40px;
+    right: 41px;
+    /* Блочная модель */
+    width: 14px;
+    height: 18px;
+}
+    
