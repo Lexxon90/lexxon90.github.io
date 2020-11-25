@@ -1,0 +1,83 @@
+h1 {
+    color: #27aedb;
+    text-align: center;
+}
+
+
+button {
+    width: 100px;
+    height: 30px;
+    border: 2px solid red;
+    border-radius: 10px;
+}
+
+.contaner {
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto;
+}
+.contaner1 {
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.contaner-new-add-comment {
+    background-color: grey;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    padding-top: 20px;
+}
+
+.contaner-new-comment {
+    background-color: greenyellow;
+    border-radius: 16px;
+}
+
+.text {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.name {
+    width: 90%;
+    margin: 0 20px;
+    border-radius: 10px;
+    padding-left: 20px;
+}
+
+.name-sirname {
+    padding-left: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.time {
+    margin-top: 20px;
+    margin-left: 20px;
+    text-align: center;
+    color: #fff;
+
+}
+
+.textarea {
+    width: 90%;
+    margin: 20px;
+    border-radius: 10px;
+    padding-left: 20px;
+    height: 150px;
+}
+
+.textcomment{
+    padding-left: 20px;
+    background-color: #fff;
+    height: 150px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+.btn {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
