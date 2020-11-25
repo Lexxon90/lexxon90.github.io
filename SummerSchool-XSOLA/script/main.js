@@ -1,4 +1,4 @@
-fetch("https://lexxon90.github.io/Work4/script/events.json")
+fetch("https://lexxon90.github.io/SummerSchool-XSOLA/script/events.json")
   .then(function (response) {
     return response.json();
   })
