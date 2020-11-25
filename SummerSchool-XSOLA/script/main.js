@@ -59,7 +59,7 @@ fetch("https://lexxon90.github.io/SummerSchool-XSOLA/script/events.json")
       // Добавляем класс для img
       img.classList = "card-img";
       // Добавляем ссылку на векторную img
-      img.src = "https://lexxon90.github.io/Work4/img/Vector.png";
+      img.src = "https://lexxon90.github.io/SummerSchool-XSOLA/img/Vector.png";
 
       // Событие при наведении на дату отображает месяц и год
       let newData = document.querySelector(`.card-number${numberCard}`);
