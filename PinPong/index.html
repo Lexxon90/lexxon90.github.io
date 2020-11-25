@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Футбол-понг</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<div class="football" disabled>
+		<img class="field" alt="Поле" src="img/field.jpg">
+		<img class="ball" alt="Мяч" src="img/ball.png" disabled>
+		<div class = "gate gate-left-up"></div>
+		<div class = "gate gate-left-down"></div>
+		<div class = "gate gate-right-up"></div>
+		<div class = "gate gate-right-down"></div>
+		<h1 class = "gol">Гооол!!!</h1>
+		<div class="contaner-score">
+			<h2>Счет</h2>
+			<div class = "score player1">0</div>
+			<div class = "score player2">0</div>
+			<button class = "btn btn-setup">Главное меню</button>
+		</div>
+		
+	</div>
+	
+	<div class="setting">
+		<div class="contaner">
+			<h1>Настройки игры</h1>
+			<h2>Размер ворот: </h2>
+			<select class="gate-size">
+				<option>20%</option>
+				<option>30%</option>
+				<option>40%</option>
+				<option>50%</option>
+			</select>
+			<h2>Время полета мяча: </h2>
+			<select class="time">
+				<option>5 секунд</option>
+				<option>10 секунд</option>
+				<option>15 секунд</option>
+				<option>20 секунд</option>
+			</select>
+			<button class = "btn btn-new-game">Новая игра</button>
+			<button class = "btn btn-begin">Начать</button>
+			
+		</div>
+	</div>
+	
+	
+	<script src="js/jquery-3.5.1.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
