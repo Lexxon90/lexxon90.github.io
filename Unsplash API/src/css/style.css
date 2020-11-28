@@ -1,0 +1,391 @@
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat-Bold.woff') format('woff2'),
+		url('../fonts/Montserrat-Bold.woff2') format('woff');
+	font-display: swap;
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+	font-family: 'Druk Wide';
+	src: url('../fonts/Druk-WideMedium.woff2') format('woff2'),
+		url('../fonts/Druk-WideMedium.woff') format('woff');
+	font-display: swap;
+    font-style: normal;
+    font-weight: bold;
+}
+
+ul {
+    /* Блочная модель */
+    padding: 0;
+    margin: 0;
+    /* Типографика */
+    list-style: none;
+}
+
+.contaner {
+    position: relative;
+    width: 2660px;
+    margin: 0 auto;
+    padding: 300px 220px;
+    background-color: #1F2326;
+    overflow:hidden;
+    z-index: -2;
+}
+
+.main-content {
+    display: none;
+}
+
+.circle1 {
+    position: absolute;
+    left: -385px;
+    top: -711px;
+    width: 2215px;
+    height: 2216px;
+    border-radius: 50%;
+    background: #FF4656;
+    z-index: -1;
+}
+
+.circle2 {
+    position: absolute;
+    left: 2727px;
+    top: 182px;
+    width: 268px;
+    height: 269px;
+    border-radius: 50%;
+    background: #EFEFEF;
+    z-index: -1;
+}
+
+.circle3 {
+    position: absolute;
+    left: 2946px;
+    top: 475px;
+    width: 98px;
+    height: 98px;
+    border-radius: 50%;
+    background: #505155;
+    z-index: -1;
+}
+
+.circle4 {
+    position: absolute;
+    left: 2836px;
+    top: 74px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #FF4656;
+    z-index: -1;
+}
+
+.circle5 {
+    position: absolute;
+    left: 177px;
+    top: 2114px;
+    width: 470px;
+    height: 470px;
+    border-radius: 50%;
+    background: #EFEFEF;
+    z-index: -1;
+}
+
+.circle6 {
+    position: absolute;
+    left: 112px;
+    top: 2082px;
+    width: 63px;
+    height: 63px;
+    border-radius: 50%;
+    background: #505155;
+    z-index: -1;
+}
+
+.circle7 {
+    position: absolute;
+    left: 2018px;
+    top: 1392px;
+    width: 1443px;
+    height: 1443px;
+    border-radius: 50%;
+    background: #292C31;
+    z-index: -1;
+}
+
+.content {
+    box-shadow: 10px 10px 80px rgba(0, 0, 0, 0.5);
+    border-radius: 32px;
+}
+
+.header {
+    display: flex;
+    padding: 46px 97px 46px 73px;
+    background-color: #1F2326;
+    border-radius: 32px 32px 0 0;
+}
+
+.header_riot{
+    padding-right: 60px;
+    margin-right: 60px;
+    border-right: 3px solid #fff;
+}
+
+.header_logo {
+    padding-right: 80px;
+}
+
+.header_nav {
+    display: flex;
+    align-items: center;
+}
+
+.header_items-nav {
+    display: flex;
+}
+
+.header_item-nav {
+    margin-right: 80px;
+    color: #fff;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+}
+
+.header_login{
+    display: flex;
+    margin-left: auto;
+}
+
+.header_login_avatar {
+    border-radius: 50%;
+    padding-right: 16px;
+}
+
+.header_login_user-name {
+    color: #fff;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+}
+
+.main {
+    position: relative;
+    height: 1386px;
+    padding-top: 113px;
+    background-color: #FF4656;
+}
+
+.main_background-img {
+    position: absolute;
+    top: 0;
+    mix-blend-mode: multiply;
+}
+
+.main_content {
+    position: relative;
+    left: 200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main_content-text {
+    margin-right: 110px;
+    font-family: "Druk Wide";
+    font-size: 156px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+    text-align: center;
+    writing-mode: tb-rl;
+}
+
+.main_character_item {
+    position: relative;
+    width: 440px;
+    height: 990px;
+    margin-right: 144px;
+    background-color: #1F2326;
+}
+
+.main_character_item_name{
+    position: absolute;
+    height: 990px;
+    top: 20px;
+    left: -48px;
+    writing-mode: tb-rl;
+    font-family: "Druk Wide";
+    -webkit-text-stroke: 2px #F8F8F8;
+    color: transparent;
+    font-size: 72px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.main_character_item_city {
+    position: absolute;
+    white-space: nowrap;
+    left: 45px;
+    top: 25px;
+    writing-mode: tb-rl;
+    font-family: "Druk Wide";
+    color: #FF4656;
+    font-size: 24px;
+}
+
+.main_character_ability {
+    position: relative;
+    bottom: 7%;
+    left: 4%;
+    width: 440px;
+    height: 110px;
+    border: 2px solid #F8F8F8;
+    background-color: #1F2326; 
+}
+
+.main_character_ability_items {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer {
+    height: 132px;
+    background-color: #F8F8F8;
+    border-radius: 0 0 32px 32px;
+}
+
+.footer_items {
+    position: relative;
+    display: flex;
+    bottom: 212px;
+    right: 125px;
+}
+
+.footer_item {
+    position: relative;
+    margin-right: 80px;
+    padding: 31px 58px;
+    width: 608px;
+    height: 186px;
+    border: 2px solid #1F2326;
+    background-color: #F8F8F8;
+}
+
+.footer_item_red-square {
+    position: absolute;
+    width: 190px;
+    height: 182px;
+    top: 64px;
+    left: 416px;
+    background: #FF4656;
+}
+
+.footer_item_icon {
+    position: absolute;
+    top: 31px;
+    left: 485px;
+}
+
+.footer_item_name {
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 32px;
+    font-family: 'Druk Wide';
+    font-size: 40px;
+    color: #C4C4C4;
+}
+
+.footer_item_discription {
+    line-height: 1;
+    margin-bottom: 32px;
+    font-family: 'Druk Wide';
+    font-size: 24px;
+    color: #1F2326;
+}
+
+.footer_item_text {
+    font-family: "Montserrat";
+    font-size: 16px;
+    color: #1F2326;
+    width: 48%;
+}
+
+.main-login-contaner {
+    display: flex;
+    
+}
+
+.main-login {
+    position: relative;
+    bottom: 100px;
+    text-align: center;
+    padding: 30px;
+    margin: auto;
+    width: 600px;
+    height: auto;
+    border: 2px solid #1F2326;
+    background-color: #fff;
+    box-shadow: 10px 10px 80px rgba(0, 0, 0, 0.5);
+}
+
+.main-login_header {
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 32px;
+    font-family: 'Druk Wide';
+    font-size: 40px;
+    color: #C4C4C4;
+}
+
+.main-login_text {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 25px;
+    left: -45px;
+    writing-mode: tb-rl;
+    font-family: "Druk Wide";
+    -webkit-text-stroke: 2px #1F2326;
+    color: transparent;
+    font-size: 72px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+input {
+    padding: 20px;
+    width: 500px;
+    margin-bottom: 30px;
+    border: 1px solid #1F2326;
+    font-family: "Montserrat";
+    font-size: 16px;
+    color: #1F2326;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background-color: #F8F8F8;
+}
+
+input::placeholder {
+    font-family: "Montserrat";
+    font-size: 16px;
+    color: #1F2326;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+button {
+    width: 200px;
+    padding: 20px;
+    font-family: "Montserrat";
+    font-size: 20px;
+    color: #1F2326;
+    background-color: #F8F8F8;
+}
