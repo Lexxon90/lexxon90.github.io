@@ -15,14 +15,13 @@ const unsplash = new Unsplash({
 
 // Генерируем адрес страницы аутентификации на unsplash.com
 // и указываем требуемые разрешения (permissions)
-console.log(unsplash.accesskey)
 const authenticationUrl = unsplash.auth.getAuthenticationUrl([
     "public",
     "write_likes"
    ]);
    // Отправляем пользователя по этому адресу
-//    location.assign(authenticationUrl);
-console.log(authenticationUrl);
+location.assign(authenticationUrl);
+
 
 // Считываем GET-параметр code из URL
 // www.example.com/auth?code=abcdef123456...
