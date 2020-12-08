@@ -21,7 +21,7 @@ const authenticationUrl = unsplash.auth.getAuthenticationUrl([
    ]);
    // Отправляем пользователя по этому адресу
 location.assign(authenticationUrl);
-
+console.log(authenticationUrl);
 
 // Считываем GET-параметр code из URL
 // www.example.com/auth?code=abcdef123456...
