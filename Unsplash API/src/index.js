@@ -10,7 +10,7 @@ const unsplash = new Unsplash({
     // Полный адрес страницы авторизации приложения (Redirect URI)
     // Важно: этот адрес обязательно должен быть указан в настройках приложения
     // на сайте Unsplash API/Developers
-    callbackUrl: "https://lexxon90.github.io/Unsplash%20API/dist/index.html"
+    callbackUrl: "urn:ietf:wg:oauth:2.0:oob"
    });
 
 // Генерируем адрес страницы аутентификации на unsplash.com
@@ -20,7 +20,7 @@ const authenticationUrl = unsplash.auth.getAuthenticationUrl([
     "write_likes"
    ]);
    // Отправляем пользователя по этому адресу
-location.assign(authenticationUrl);
+// location.assign(authenticationUrl);
 console.log(authenticationUrl);
 
 // Считываем GET-параметр code из URL
