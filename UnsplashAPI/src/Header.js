@@ -25,7 +25,7 @@ import React from "react";
                             {props.username}
                         </a>
                         <a
-                        href="http://localhost:8080/"
+                        href="https://lexxon90.github.io/UnsplashAPI/dist/"
                         onClick={props.logout}>
                             <img 
                                 src="img/exit.svg"  
