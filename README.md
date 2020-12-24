@@ -1,5 +1,9 @@
 # lexxon90.github.io
 
+## `Дипломная работа Unsplash API на React`
+
+[Ссылка](https://lexxon90.github.io/UnsplashAPI/dist/), [Репозиторий](https://github.com/Lexxon90/lexxon90.github.io/tree/master/UnsplashAPI/)
+
 ## `Верстка/ Landing page - Отели`
 
 [Ссылка](https://lexxon90.github.io/Верстка/LandingPageHotel/index.html), [Репозиторий](https://github.com/Lexxon90/lexxon90.github.io/tree/master/Верстка/LandingPageHotel)
