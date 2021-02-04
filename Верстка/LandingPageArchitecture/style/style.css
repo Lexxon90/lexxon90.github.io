@@ -243,6 +243,8 @@ button {
 .card__img {
     position: relative;
     bottom: 10px;
+    width: 127px;
+    height: 127px;
     margin-right: 59px;
     margin-left: 122px;
 }
