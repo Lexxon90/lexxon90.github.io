@@ -513,14 +513,12 @@ button {
     border: none;
 }
 
-.footer__form-item::placeholder {
-    padding-top: 14px;
-    padding-left: 24px;
-}
 
 .footer__form_input {
     width: 570px;
     height: 60px;
+    padding-left: 24px;
+    padding-top: 14px;
 }
 
 .footer__form_textarea {
