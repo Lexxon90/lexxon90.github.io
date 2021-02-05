@@ -513,20 +513,23 @@ button {
     border: none;
 }
 
-.footer__form-item::placeholder {
-    padding-top: 14px;
-    padding-left: 24px;
+
+
+.footer__form-item::-moz-placeholder {
+    color: #CACACA;
 }
 
 .footer__form_input {
-    width: 570px;
-    height: 60px;
+    width: 522px;
+    height: 42px;
+    padding: 14px 24px;
 }
 
 .footer__form_textarea {
     resize: none;
-    height: 150px;
-    width: 570px;
+    height: 126px;
+    width: 522px;
+    padding: 14px 24px;
 }
 
 .footer__form_button {
@@ -546,12 +549,7 @@ button {
     cursor: pointer;
     margin-left: 40px;
 }
-
-.footer__form_checkbox::after {
-    content: "Согласен на обработку данных";
-    position: relative;
-    bottom: 8px;
-    left: 17px;
+.footer__checkbox-text {
     font-size: 15px;
     line-height: 32px;
     color: #CACACA;
@@ -695,11 +693,11 @@ button {
     }
 
     .footer__form_input {
-        width: 534px;
+        width: 510px;
     }
 
     .footer__form_textarea {
-        width: 534px;
+        width: 510px;
     }
 
     .footer__form_button {
@@ -1061,7 +1059,7 @@ button {
     }
     
     .footer__form-item {
-        width: 100%;
+        width: 88%;
     }
 
     .footer__form_button {
