@@ -7,6 +7,7 @@ body {
     font-weight: normal;
     font-style: normal;
     color: #333;
+    background-color: #999;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -25,6 +26,7 @@ ul {
     padding-bottom: 80px;
     padding-left: 160px;
     padding-right: 160px;
+    
 }
 
 @mixin button {
@@ -209,6 +211,7 @@ h3 {
 
 .about-us {
     @include content-contaner;
+    background-color: #fff;
 
     p {
         margin-top: 30px;
@@ -349,6 +352,7 @@ h3 {
 
 .catalog {
     @include content-contaner;
+    background-color: #fff;
     
     &__header {
         display: flex;
@@ -453,6 +457,7 @@ h3 {
 
 .events {
     @include content-contaner;
+    background-color: #fff;
     &__contaner {
         display:flex;
         flex-wrap: wrap;
@@ -612,6 +617,7 @@ h3 {
 
 .projects {
     @include content-contaner;
+    background-color: #fff;
     p {
       margin-top: 30px;
       line-height: 32px;
@@ -642,12 +648,87 @@ h3 {
 
 .contacts {
     @include content-contaner();
+    background-color: #fff;
+    padding-bottom: 0;
+    padding-left: 0;
+
+    h3 {
+        padding-left: 160px;
+    }
 
     .form {
         width: 540px;
-        border: 1px solid #333;
+        border-top: 1px solid #cacaca;
+        border-right: 1px solid #cacaca;
         padding-top: 124px;
         padding-left: 160px;
         padding-bottom: 124px;
+
+        .firmname {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        .adress {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 32px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 36px;
+            div{
+                font-size: 24px;
+                line-height: 32px;
+            }
+            input {
+                width: 400px;
+                border-radius: 100px;
+                padding: 4px 24px 4px;
+                margin-top: 23px;
+                border: 1px solid #333;
+
+                &::placeholder {
+                    font-size: 16px;
+                    line-height: 32px;
+                    color: #999;
+                }
+            }
+            button {
+                @include button();
+                margin-top: 23px;
+                padding: 17px 35px;
+                width: 157px;
+
+            }
+        }
+        .telephone {
+            margin-top: 36px;
+            div {
+                margin-bottom: 18px;
+                font-size: 24px;
+                line-height: 32px;
+            }
+            img:first-child{
+                margin-right: 20px;
+            }
+            
+        }
+    }
+}
+
+footer {
+    @include content-contaner();
+    display: flex;
+    justify-content: space-between;
+    padding-top: 47px;
+    padding-bottom: 47px;
+    background-color: #000;
+    color: #fff;
+
+    img:not(:last-child){
+        margin-right: 20px;
     }
 }
