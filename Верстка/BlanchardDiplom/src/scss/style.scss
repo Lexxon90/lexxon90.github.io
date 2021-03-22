@@ -78,6 +78,21 @@ h3 {
     line-height: 65px;
 }
 
+a {
+    text-decoration: none;
+    color: #fff;
+    &:hover {
+        color: #C283F3;
+    }
+    &:focus {
+        outline: 1px solid #7943A4;
+    }
+    &:active {
+        color: #7943A4;
+        outline: none;
+    }
+}
+
 .header {
     @include content-contaner;
     display: flex;
@@ -114,15 +129,15 @@ h3 {
     }
 
     &__login {
+        cursor: pointer;
         font-style: 18px;
-
+        
         &::before {
             content: "\2386";
             position: relative;
             top: 3px;
             margin-right: 6px;
             font-size: 35px;
-            
         }
 
     }
@@ -143,7 +158,18 @@ h3 {
     }
 
     li {
+        cursor: pointer;
         color: #fff;
+
+        &:hover::after {
+            border-color: #C283F3;
+        }
+        &:focus::after {
+            border-color: #7943A4;
+        }
+        &:active::after {
+            border-color: #7943A4;
+        }
 
         &::after {
             content: ""; //2227
@@ -173,6 +199,9 @@ h3 {
         background-color: transparent;
         border-bottom: 1px solid #fff;
         width: 218px;
+        font-size: 18px;
+        line-height: 25px;
+        color: #fff;
 
         &::placeholder {
             font-family: "Open Sans";
