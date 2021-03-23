@@ -1,9 +1,14 @@
 import 'swiper/swiper-bundle.css';
 import './scss/style.scss'
 
+import SimpleBar from 'simplebar'; 
+import 'simplebar/dist/simplebar.css';
+
 import Swiper from 'swiper/bundle';
 // import Swiper styles
 
+
+new SimpleBar(document.querySelector(".search__menu"));
 
 const swiper = new Swiper('.swiper-container', {
   effect: 'fade',

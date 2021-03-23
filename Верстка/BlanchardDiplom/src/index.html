@@ -28,29 +28,96 @@
             </div>
             <nav class="header__nav">
                 <ul>
-                    <li><a href="#about-us">О нас</a></li>
-                    <li><a href="#gallery">Галерея</a></li>
-                    <li><a href="#catalog">Каталог</a></li>
-                    <li><a href="#events">События</a></li>
-                    <li><a href="#books">Издания</a></li>
-                    <li><a href="#projects">Проекты</a></li>
-                    <li><a href="#contacts">Контакты</a></li>
+                    <li><a href="#about-us" tabindex="1">О нас</a></li>
+                    <li><a href="#gallery" tabindex="2">Галерея</a></li>
+                    <li><a href="#catalog" tabindex="3">Каталог</a></li>
+                    <li><a href="#events" tabindex="4">События</a></li>
+                    <li><a href="#books" tabindex="5">Издания</a></li>
+                    <li><a href="#projects" tabindex="6">Проекты</a></li>
+                    <li><a href="#contacts" tabindex="7">Контакты</a></li>
                 </ul>
             </nav>
-            <a  class="header__login" tabindex="0">Войти</a>
+            <a  class="header__login" tabindex="8">Войти</a>
         </header>
         <div class="search">
-            <ul>
-                <li tabindex="0"><a>Импрессионизм</a></li>
-                <li tabindex="0"><a>Реализм</a></li>
-                <li tabindex="0"><a>Постимпрессионизм</a></li>
-                <li tabindex="0"><a>Авангард</a></li>
-                <li tabindex="0"><a>Футуризм</a></li>
-            </ul>
-            <div>
-                <img src="img/Group64.png" alt="лупа">
-                <input type="search" name="Поиск по сайту" placeholder="Поиск по сайту">   
+            <div class="contaner__menu">
+                <ul>
+                    <li>
+                        <a tabindex="9">Импрессионизм</a>
+                        <div class="search__menu" data-simplebar>
+                            <div class="menu__item item1">Тинторетто</div>
+                            <div class="menu__item item2">Фридрих</div>
+                            <div class="menu__item item3">Леонардо</div>
+                            <div class="menu__item item4">Верроккьо</div>
+                            <div class="menu__item item1">Тинторетто</div>
+                            <div class="menu__item item2">Фридрих</div>
+                            <div class="menu__item item3">Леонардо</div>
+                            <div class="menu__item item4">Верроккьо</div>
+                        </div>
+                    </li>
+                    <li>
+                        <a tabindex="10">Реализм</a>
+                        <div class="search__menu" data-simplebar>
+                            <div class="menu__item item1">Реализм1</div>
+                            <div class="menu__item item2">Реализм2</div>
+                            <div class="menu__item item3">Реализм3</div>
+                            <div class="menu__item item4">Реализм4</div>
+                            <div class="menu__item item1">Реализм5</div>
+                            <div class="menu__item item2">Реализм6</div>
+                            <div class="menu__item item3">Реализм7</div>
+                            <div class="menu__item item4">Реализм8</div>
+                        </div>
+                    </li>
+                    <li>
+                        <a tabindex="11">Постимпрессионизм</a>
+                        <div class="search__menu" data-simplebar>
+                            <div class="menu__item item1">Постимпрессионизм1</div>
+                            <div class="menu__item item2">Постимпрессионизм2</div>
+                            <div class="menu__item item3">Постимпрессионизм3</div>
+                            <div class="menu__item item4">Постимпрессионизм4</div>
+                            <div class="menu__item item1">Постимпрессионизм5</div>
+                            <div class="menu__item item2">Постимпрессионизм6</div>
+                            <div class="menu__item item3">Постимпрессионизм7</div>
+                            <div class="menu__item item4">Постимпрессионизм8</div>
+                        </div>
+                    </li>
+                    <li>
+                        <a tabindex="12">Авангард</a>
+                        <div class="search__menu" data-simplebar>
+                            <div class="menu__item item1">Авангард1</div>
+                            <div class="menu__item item2">Авангард2</div>
+                            <div class="menu__item item3">Авангард3</div>
+                            <div class="menu__item item4">Авангард4</div>
+                            <div class="menu__item item1">Авангард5</div>
+                            <div class="menu__item item2">Авангард6</div>
+                            <div class="menu__item item3">Авангард7</div>
+                            <div class="menu__item item4">Авангард8</div>
+                        </div>
+                    </li>
+                    <li>
+                        <a tabindex="13">Футуризм</a>
+                        <div class="search__menu" data-simplebar>
+                            <div class="menu__item item1">Футуризм1</div>
+                            <div class="menu__item item2">Футуризм2</div>
+                            <div class="menu__item item3">Футуризм3</div>
+                            <div class="menu__item item4">Футуризм4</div>
+                            <div class="menu__item item1">Футуризм5</div>
+                            <div class="menu__item item2">Футуризм6</div>
+                            <div class="menu__item item3">Футуризм7</div>
+                            <div class="menu__item item4">Футуризм8</div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="form-search">
+                    <svg tabindex="14" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
+                    </svg>
+                    <input tabindex="15" type="search" name="Поиск по сайту" placeholder="Поиск по сайту">   
+                </div>
             </div>
+                
+            
             
         </div>
         <!-- Слайдер "Прикоснитесь к прекрасному" -->

@@ -21,12 +21,16 @@ ul {
     list-style-type: none
 }
 
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
 @mixin content-contaner {
     padding-top: 80px;
     padding-bottom: 80px;
     padding-left: 160px;
     padding-right: 160px;
-    
 }
 
 @mixin button {
@@ -59,7 +63,16 @@ ul {
         position: absolute;
         width: 1920px;
         height: 800px;
+        overflow: hidden;
         z-index: -1;
+
+        .swiper-slide {
+            transition: background-size 0.5s ease;
+            background-size: 120% 120%;
+            // transform: translate3d(0px, 0px, 0px);
+            // transition-duration: 300ms;
+            // animation: backgroundAnimation 30s linear infinite;
+        }
     }
 
     .slide_1 {
@@ -78,20 +91,7 @@ h3 {
     line-height: 65px;
 }
 
-a {
-    text-decoration: none;
-    color: #fff;
-    &:hover {
-        color: #C283F3;
-    }
-    &:focus {
-        outline: 1px solid #7943A4;
-    }
-    &:active {
-        color: #7943A4;
-        outline: none;
-    }
-}
+
 
 .header {
     @include content-contaner;
@@ -116,6 +116,20 @@ a {
     }
 
     &__nav {
+        a {
+            color: #fff;
+            &:hover {
+                color: #C283F3;
+            }
+            &:focus {
+                outline: 1px solid #7943A4;
+            }
+            &:active {
+                color: #7943A4;
+                outline: none;
+            }
+        }
+
         ul {
             display: flex;
             font-size: 18px;
@@ -123,9 +137,9 @@ a {
         }
 
         li:not(:last-child) {
-            
             margin-right: 62px;
         }
+
     }
 
     &__login {
@@ -140,37 +154,37 @@ a {
             font-size: 35px;
         }
 
+        &:hover {
+            color: #C283F3;
+        }
+        &:focus {
+            outline: 1px solid #7943A4;
+        }
+        &:active {
+            color: #7943A4;
+            outline: none;
+        }
+
     }
 }
 
 .search {
     @include content-contaner;
-
-    display: flex;
-    justify-content: space-between;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.4);
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 0;
 
-    ul{
+    .contaner__menu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    ul {
         display: flex;
     }
 
-    li {
-        cursor: pointer;
-        color: #fff;
-
-        &:hover::after {
-            border-color: #C283F3;
-        }
-        &:focus::after {
-            border-color: #7943A4;
-        }
-        &:active::after {
-            border-color: #7943A4;
-        }
-
+    a {
         &::after {
             content: ""; //2227
             position: relative;
@@ -184,13 +198,162 @@ a {
             box-sizing: border-box;
             transform: rotate(45deg);
         }
-        &:not(:last-child) {
-            margin-right: 97px;
-        } 
+
+        &:hover::after {
+            top: 1px;
+            border-bottom: none;
+            border-right: none;
+            border-top: 1px solid #C283F3;
+            border-left: 1px solid #C283F3;
+        }
+        &:focus::after {
+            border-color: #7943A4;
+        }
+        &:active::after {
+            border-color: #7943A4;
+        }      
     }
 
-    img {
+    li {
+        color: #fff;
+        position: relative;
+        padding-bottom: 30px;
+
+        &:not(:last-child) {
+            margin-right: 97px;
+        }
+
+        &:hover {
+            color: #C283F3;
+
+            a::after {
+                top: 1px;
+                border-bottom: none;
+                border-right: none;
+                border-top: 1px solid #C283F3;
+                border-left: 1px solid #C283F3;
+            }
+        }
+    }
+
+    .search__menu {
+        position: absolute;
+        top: 46px;
+        display: none;
+        width: 300px;
+        height: 300px;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    li:hover .search__menu {
+        display: block;
+    }
+
+    .simplebar-vertical {
+        background-color: #000;
+        width: 3px !important;
+        height: 222px;
+        top: 38px !important;
+        right: 13px;
+    }
+    .simplebar-scrollbar {
+        background-color: #9D5CD0;
+    }
+
+
+    .menu__item {
+        position:relative;
+        cursor: pointer;
+        width: 206px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 14px;
+        margin-left: 40px;
+        margin-right: 40px;
+        color: #fff;
+
+        &:not(:last-child){
+            margin-bottom: 20px;
+        }
+        &:first-child {
+            margin-top: 40px;
+        }
+        &:last-child {
+            margin-bottom: 40px;
+        }
+
+        &:hover {
+            outline: 2px solid #9D5CD0;
+        }
+        &:active {
+            outline: 2px solid #D1A9F0;
+            background-color: #C283F3;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 220px;
+                height: 40px;
+                background-color: #C283F3;
+                opacity: 0.4;
+            }
+        }
+    }
+    .item1{
+        background-image: url(../img/menu/Rectangle57.jpg);
+    }
+    .item2{
+        background-image: url(../img/menu/Rectangle58.jpg);
+    }
+    .item3{
+        background-image: url(../img/menu/Rectangle59.jpg);
+    }
+    .item4{
+        background-image: url(../img/menu/Rectangle60.jpg);
+    }
+
+    .form-search {
+        position: relative;
+        bottom: 10px;
+
+        &:hover {
+            rect {
+                fill: #C283F3;
+            }
+            path {
+                fill: #C283F3;
+            }
+            input {
+                border-bottom: 1px solid #C283F3;
+            }
+        }
+
+        &:focus-within {
+            rect {
+                fill: #C283F3;
+            }
+            path {
+                fill: #C283F3;
+            }
+            input {
+                color: #C283F3;
+                border-bottom: 1px solid #fff;
+            }
+        }
+
+
+    }
+
+    svg {
+        position: relative;
+        top: 5px;
         margin-right: 9px;
+
+        &:focus {
+            outline: 1px solid #C283F3;
+        }
     }
 
     input {
@@ -208,6 +371,9 @@ a {
             font-size: 18px;
             line-height: 25px;
             color: #fff;
+        }
+        &:focus {
+            outline: 1px solid #C283F3;
         }
     }
 }
@@ -638,9 +804,6 @@ a {
             @include swiper-button;
             top: 30px;
         }
-
-        
-
     }
 }
 
