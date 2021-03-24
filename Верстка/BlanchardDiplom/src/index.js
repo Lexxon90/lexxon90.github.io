@@ -1,5 +1,8 @@
 import 'swiper/swiper-bundle.css';
 import './scss/style.scss'
+import $ from 'jquery';
+require('webpack-jquery-ui/accordion');
+
 
 import SimpleBar from 'simplebar'; 
 import 'simplebar/dist/simplebar.css';
@@ -106,8 +109,8 @@ let select = function () {
 }
 
 select();
-// const headerSelect = document.querySelector('.select__header');
-// headerSelect.addEventListener("click", ()=>{
-//   const bodySelect = document.querySelector('.select__body');
-//   console.log(this)
-// })
+
+// Accordion
+$( function() {
+    $( "#accordion" ).accordion();
+} );
