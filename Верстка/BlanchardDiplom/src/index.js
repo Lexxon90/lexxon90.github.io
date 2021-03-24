@@ -20,7 +20,7 @@ const swiper = new Swiper('.swiper-container', {
 const swiperGallery = new Swiper('.swiper-container-gallery', {
   slidesPerView: 3,
   slidesPerColumn: 2,
-  spaceBetween: 30,
+  spaceBetween: 40,
 
   pagination: {
     el: '.swiper-pagination',
