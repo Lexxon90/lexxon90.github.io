@@ -10,6 +10,11 @@ body {
     background-color: #999;
 }
 
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     padding: 0;
@@ -39,13 +44,35 @@ h3 {
     padding-right: 160px;
 }
 
-@mixin button {
+@mixin button() {
     cursor: pointer;
+    position: relative;
     padding: 23px 30px;
-    border: 1px solid #9D5CD0;
+    border: 2px solid #9D5CD0;
     border-radius: 30px;
     background-color: transparent;
     font-weight: bold;
+
+    &:hover {
+        color:#fff;
+        background-color: #9D5CD0;
+    }
+    &:active {
+        background-color: #D1A9F0;
+    }
+
+    &:focus {
+        &::after {
+            content: "";
+            position: absolute;
+            top: -7px;
+            left: -7px;
+            right: 0;
+            bottom: 0;
+            display: block;
+            border: 2px solid #9D5CD0;
+        }
+    }
 }
 
 @mixin swiper-button {
@@ -388,11 +415,18 @@ header {
             line-height: 30px;
         }
         button {
-            @include button;
+            @include button();
             margin-top: 92px;
             font-size: 20px;
             color:#fff;
             background-color: #9D5CD0;
+            &:focus {
+                &::after {
+                    width: 333px;
+                    height: 80px;
+                    border-radius: 35px;
+                }
+            }
         }
     } 
 }
@@ -577,6 +611,10 @@ header {
 
         .age {
             width: 800px;
+            .ui-accordion-header {
+                margin: 0;
+                padding: 0;
+            }
             .age-item {
                 display: flex;
                 align-items: center;
@@ -628,6 +666,13 @@ header {
                     border-right: 1px solid #000;
                 }
             }
+
+            .ui-accordion-content-active {
+                padding-top: 16px;
+                padding-bottom: 22px;
+                padding-left: 10px;
+                margin: 0;
+            }
             
             ul {
                 padding-top: 25px;
@@ -638,8 +683,9 @@ header {
 	            flex-wrap: wrap;
                 li {
                     cursor: pointer;
+                    line-height: 1;
                     margin-left: 0;
-                    width: 250px;
+                    width: 258px;
                     &:not(:nth-child(9n+1)) {
                         margin-top: 15px;
                     }
@@ -656,7 +702,7 @@ header {
 }
 // События
 .events {
-    @include content-contaner($top: 75px, $bottom: 75px);
+    @include content-contaner($top: 75px, $bottom: 70px);
     background-color: #fff;
     &__contaner {
         display:flex;
@@ -665,7 +711,7 @@ header {
         .card-hidden {
             display: none;
         }
-        .card {
+        .event-card {
             position: relative;
             width: 500px;
             height: 700px;
@@ -710,15 +756,22 @@ header {
     button {
         @include button;
         display: block;
+        width: 180px;
         margin: 50px auto 0;
         color: #9D5CD0;
         font-weight: bold;
-
+        &:focus {
+            &::after {
+                width: 186px;
+                height: 70px;
+                border-radius: 38px;
+            }
+        }
     }
 }
-
+// Издания
 .books-contaner {
-    @include content-contaner($top:80px);
+    @include content-contaner($top:80px, $bottom:67px);
     display: flex;
     background-image: url(../img/books.jpg);
     color: #fff;
@@ -731,16 +784,48 @@ header {
             flex-direction: column;
 
             &-header {
+                margin-top: 15px;
+                margin-bottom: 10px;
                 font-weight: bold;
                 font-size: 16px;
                 line-height: 32px;
             }
             .label-check {
+                cursor: pointer;
+                position: relative;
+                padding-left: 24px;
+                transition: color .3s ease-in-out ;
+
                 &:not(:last-child) {
-                    margin-bottom: 10px;
+                    margin-bottom: 16px;
                 }
             }
-
+            &-item {
+                display: none;
+            }
+            &-item + span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 12px;
+                height: 12px;
+                border: 1px solid #fff;
+            }
+            &-item:checked + span {
+                border: 1px solid #C283F3;
+                transition: border .3s ease-in-out ;
+            }
+            &-item + span::before {
+                content: '\25CF';
+                position: absolute;
+                bottom: 0;left: 1px;
+                opacity: 0;
+                color: #C283F3;
+                transition: opacity .3s ease-in-out ;
+            }
+            &-item:checked + span::before{
+                opacity: 1;
+            }
         }
         .cost {
             margin-top: 30px;
@@ -756,10 +841,12 @@ header {
                 border-radius: 6px;
                 p {
                     font-weight: normal;
-                    margin: 4px 10px;
+                    margin: 11px 10px;
                 }
                 input {
                     width: 73px;
+                    color: #fff;
+                    font-size: 16px;
                     background-color: #9D5CD0;
                     border: none;
                 }
@@ -769,8 +856,10 @@ header {
     }
     .books_list {
         position: relative;
-        margin-left: 190px;
-        padding-top: 50px;
+        margin-left: 163px;
+        padding-top: 94px;
+        padding-bottom: 10px;
+        padding-left: 10px;
         overflow: hidden;
         .books__item{
             position: relative;
@@ -786,19 +875,30 @@ header {
             .cost {
                 position: absolute;
                 bottom: 80px;
-                right: 20px;
+                right: -6px;
                 font-style: italic;
             }
             button {
-                @include button;
-                margin-top: 20px;
+                @include button();
+                cursor:pointer;
+                margin-top: 15px;
                 color: #fff;
-                padding: 8px 14px;
+                padding: 10px 28px;
+                &:focus {
+                    &::after {
+                        width: 126px;
+                        height: 46px;
+                        border-radius: 24px;
+                    }
+                }
             }
+            
         }
         .swiper-pagination {
             position: absolute;
-            top: 16px;
+            height: 20px;
+            width: 35px;
+            top: 41px;
             left: 55px;
             text-align: unset;
         }
@@ -806,45 +906,113 @@ header {
         .swiper-button-next {
             position: absolute;
             @include swiper-button;
-            top: 30px;
-            left: 100px;
+            top: 54px;
+            left: 110px;
         }
         .swiper-button-prev {
             position: absolute;
             @include swiper-button;
-            top: 30px;
+            top: 54px;
         }
     }
 }
 
 .projects {
-    @include content-contaner;
+    @include content-contaner($top:80px);
     background-color: #fff;
     p {
-      margin-top: 30px;
-      line-height: 32px;
-      width: 65%;  
+        margin-top: 16px;
+        line-height: 32px;
+        width: 65%;
+      span {
+          position: relative;
+      }
+      .text {
+        position: relative;
+        color:#fff;
+        margin-left: 9px;
+        margin-right: 8px;
+        &::before {
+            content: "i";
+            position: absolute;
+            left: 1px;
+            color: #fff;
+            z-index: 1;
+            font-size: 14px;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 3px;
+            left: -5px;
+            background-color: #9D5CD0;
+            border-radius: 50%;
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+        }
+      }
+      .tooltip {
+        position:absolute;
+        bottom: 30px;
+        right: -121px;
+        width: 240px;
+        padding: 8px 11px;
+        color: #fff;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: center;
+        background-color: #cacaca;
+        opacity: 0;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 125px;
+            border: 6px solid transparent;
+            border-top-color: #cacaca;
+        }
+      }
+      .text:hover + .tooltip {
+        opacity: 1;
+    }
     }
     .sponsors__name {
-        margin-top: 30px;
+        margin-top: 20px;
         font-weight: 600;
         font-size: 24px;
         line-height: 32px;
     }
+
+    .books__item {
+        max-width: 450px;
+    }
+    .swiper-wrapper {
+        margin-left: 50px;
+    }
     .swiper-container-sponsors {
         position: relative;
-        padding-top: 23px;
-        padding-left: 50px;
+        margin-top: 23px;
+        margin-right: 40px;
+        padding-left: 77px;
         overflow: hidden;
-
-        .swiper-button-prev {
-            @include swiper-button;
-            position: absolute;
-        }
-        .swiper-button-next {
-            @include swiper-button;
-            position: absolute;
-        }
+    }
+    .button {
+        position: relative;
+    }
+    .swiper-sponsors-button-prev {
+        @include swiper-button;
+        position: absolute;
+        top: -92px;
+        left: 0px;
+    }
+    .swiper-sponsors-button-next {
+        @include swiper-button;
+        position: absolute;
+        top: -92px;
+        right: 7px;
     }
 }
 

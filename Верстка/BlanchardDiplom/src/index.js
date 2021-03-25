@@ -66,8 +66,8 @@ const swiperSponsors = new Swiper ('.swiper-container-sponsors', {
   },
 
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-sponsors-button-next',
+    prevEl: '.swiper-sponsors-button-prev',
   },
   
 });
@@ -114,3 +114,38 @@ select();
 $( function() {
     $( "#accordion" ).accordion();
 } );
+
+// События
+let buttonCard = document.querySelector('.button-card');
+let card = document.querySelectorAll(".event-card");
+
+buttonCard.addEventListener('click', function(){
+  if (buttonCard.textContent=="Все события") {
+      card.forEach(function(element){
+        element.classList.remove('card-hidden');
+      })
+      buttonCard.textContent = "Скрыть события"
+  }
+    else {
+        for (let i=3; i<card.length; i++ ) {
+          card[i].classList.add('card-hidden');
+        }
+        buttonCard.textContent = "Все события";
+    }
+})
+
+// Чекбокс 
+let checkbox = document.querySelectorAll(".checkbox-item");
+console.log(checkbox);
+checkbox.forEach(function(element){
+  element.addEventListener("click", function(){
+    let checkboxItem = document.getElementById(element.id);
+    if (element.checked) {
+      checkboxItem.parentElement.style.color = "#C283F3";
+    }
+    else {
+      checkboxItem.parentElement.style.color = "#fff";
+    }
+  })
+})
+
