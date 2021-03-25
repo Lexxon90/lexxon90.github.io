@@ -986,53 +986,49 @@ header {
         line-height: 32px;
     }
 
-    .books__item {
-        max-width: 450px;
-    }
-    .swiper-wrapper {
-        margin-left: 50px;
-    }
     .swiper-container-sponsors {
         position: relative;
         margin-top: 23px;
-        margin-right: 40px;
-        padding-left: 77px;
+        margin-right: 54px;
+        margin-left: 75px;
         overflow: hidden;
     }
     .button {
         position: relative;
     }
-    .swiper-sponsors-button-prev {
+    .swiper-button-prev {
         @include swiper-button;
         position: absolute;
-        top: -92px;
+        top: -70px;
         left: 0px;
     }
-    .swiper-sponsors-button-next {
+    .swiper-button-next {
         @include swiper-button;
         position: absolute;
-        top: -92px;
+        top: -70px;
         right: 7px;
     }
 }
 
 .contacts {
-    @include content-contaner();
+    @include content-contaner($top:0px);
+    display: flex;
     background-color: #fff;
     padding-bottom: 0;
     padding-left: 0;
+    padding-right: 0;
 
     h3 {
         padding-left: 160px;
     }
 
     .form {
-        width: 540px;
+        width: 525px;
         border-top: 1px solid #cacaca;
         border-right: 1px solid #cacaca;
-        padding-top: 124px;
+        padding-top: 125px;
         padding-left: 160px;
-        padding-bottom: 124px;
+        padding-bottom: 100px;
 
         .firmname {
             font-weight: 600;
@@ -1048,16 +1044,16 @@ header {
         form {
             display: flex;
             flex-direction: column;
-            margin-top: 36px;
+            margin-top: 30px;
             div{
                 font-size: 24px;
                 line-height: 32px;
+                margin-bottom: 17px;
             }
             input {
-                width: 400px;
+                width: 350px;
                 border-radius: 100px;
-                padding: 4px 24px 4px;
-                margin-top: 23px;
+                padding: 11px 24px 11px;
                 border: 1px solid #333;
 
                 &::placeholder {
@@ -1065,6 +1061,10 @@ header {
                     line-height: 32px;
                     color: #999;
                 }
+            }
+            .input__name{
+                margin-bottom: 25px;
+
             }
             button {
                 @include button();
@@ -1075,7 +1075,7 @@ header {
             }
         }
         .telephone {
-            margin-top: 36px;
+            margin-top: 40px;
             div {
                 margin-bottom: 18px;
                 font-size: 24px;
@@ -1086,6 +1086,22 @@ header {
             }
             
         }
+    }
+    .map {
+        padding-top: 65px;
+    }
+    /* Работа с картой Яндекс */
+
+    [class*="ground-pane"] {
+        filter: grayscale(1);
+    }
+
+    [class*="gotoymaps__container"] {
+        display: none !important;
+    }
+
+    [class*="copyright__content"] {
+    display: none !important;
     }
 }
 

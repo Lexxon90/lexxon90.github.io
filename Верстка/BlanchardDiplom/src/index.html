@@ -671,8 +671,8 @@
                         </div>
                         <div class="button">
                             <!-- If we need navigation buttons -->
-                            <div class="swiper-sponsors-button-prev"></div>
-                            <div class="swiper-sponsors-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
                         </div>
                     </div>
                     
@@ -681,39 +681,44 @@
             <!-- Контакты -->
             <div class="contacts">
                 <a name="contacts"></a>
-                <h3>Контакты</h3>
-                <div class="form">
-                    <div class="firmname">Шоурум №4</div>
-                    <div class="adress">Леонтьевский переулок, дом 5, строение 1</div>
-                    
-                    <form action="" >
-                        <div>Заказать обратный звонок</div>
-                        <input 
-                            name="Имя"
-                            type="text"
-                            placeholder="Имя*"
-                            data-validate-field="name"
-                        >
-                        <input 
-                            name="Телефон"
-                            type="tel"
-                            placeholder="Телефон*"
-                            data-validate-field="tel"
-                        >
-                        <button>
-                            Заказать
-                        </button>
-                    </form>
+                <div class="contacts__column1">
+                    <h3>Контакты</h3>
+                    <div class="form">
+                        <div class="firmname">Шоурум №4</div>
+                        <div class="adress">Леонтьевский переулок, дом 5, строение 1</div>
+                        
+                        <form action="" >
+                            <div>Заказать обратный звонок</div>
+                            <input 
+                                name="Имя"
+                                type="text"
+                                placeholder="Имя*"
+                                data-validate-field="name"
+                                class="input__name"
+                            >
+                            <input 
+                                name="Телефон"
+                                type="tel"
+                                placeholder="Телефон*"
+                                data-validate-field="tel"
+                                class="input__telephone"
+                            >
+                            <button>
+                                Заказать
+                            </button>
+                        </form>
 
-                    <div class="telephone">
-                        <div>Связаться в один клик</div>
-                        <div>
-                            <img src="img/social/Whatsapp-Icon.jpg" alt="whatsup">
-                            <img src="img/social/Telegram_2019_Logo.jpg" alt="telegram">
+                        <div class="telephone">
+                            <div>Связаться в один клик</div>
+                            <div>
+                                <img src="img/social/Whatsapp-Icon.jpg" alt="whatsup">
+                                <img src="img/social/Telegram_2019_Logo.jpg" alt="telegram">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="map"></div>
+                <!-- Карта Яндекс -->
+                <div class="map" id="map" style="width: 1238px; height: 700px"></div>
             </div>
         </main>
         

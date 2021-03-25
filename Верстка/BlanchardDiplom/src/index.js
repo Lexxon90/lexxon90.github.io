@@ -2,7 +2,7 @@ import 'swiper/swiper-bundle.css';
 import './scss/style.scss'
 import $ from 'jquery';
 require('webpack-jquery-ui/accordion');
-
+import ymaps from 'ymaps';
 
 import SimpleBar from 'simplebar'; 
 import 'simplebar/dist/simplebar.css';
@@ -66,8 +66,8 @@ const swiperSponsors = new Swiper ('.swiper-container-sponsors', {
   },
 
   navigation: {
-    nextEl: '.swiper-sponsors-button-next',
-    prevEl: '.swiper-sponsors-button-prev',
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
   
 });
@@ -149,3 +149,29 @@ checkbox.forEach(function(element){
   })
 })
 
+ymaps
+  .load()
+  .then(maps => {
+    const map = new maps.Map('map', {
+      // Координаты центра карты.
+            // Порядок по умолчанию: «широта, долгота».
+            // Чтобы не определять координаты центра карты вручную,
+            // воспользуйтесь инструментом Определение координат.
+            center: [55.75846306898368,37.601079499999905],
+            // Уровень масштабирования. Допустимые значения:
+            // от 0 (весь мир) до 19.
+            zoom: 17,
+            controls: []
+    });
+    var myPlacemark = new maps.Placemark([55.75846306898368,37.601079499999905], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/location.svg',
+        iconImageSize: [20, 20],
+        iconImageOffset: [0, 0]
+    });
+
+    map.geoObjects.add(myPlacemark);
+    map.controls.add('zoomControl');
+    
+  })
+  .catch(error => console.log('Failed to load Yandex Maps', error));
