@@ -11,9 +11,9 @@ import Swiper from 'swiper/bundle';
 // import Swiper styles
 
 
-new SimpleBar(document.querySelector(".search__menu"));
+// new SimpleBar(document.querySelector(".search-nav__item"));
 
-const swiper = new Swiper('.swiper-container', {
+const swiper = new Swiper('.swiper-container-background', {
   effect: 'fade',
   autoplay: {
     delay: 5000,
@@ -161,7 +161,7 @@ ymaps
             // Уровень масштабирования. Допустимые значения:
             // от 0 (весь мир) до 19.
             zoom: 17,
-            controls: []
+            controls: ['geolocationControl']
     });
     var myPlacemark = new maps.Placemark([55.75846306898368,37.601079499999905], {}, {
         iconLayout: 'default#image',
@@ -169,9 +169,14 @@ ymaps
         iconImageSize: [20, 20],
         iconImageOffset: [0, 0]
     });
+    var zoomControl = new maps.control.ZoomControl({
+      options: {
+          size: "small"
+      }
+    });
+    map.controls.add(zoomControl);
 
     map.geoObjects.add(myPlacemark);
-    map.controls.add('zoomControl');
     
   })
   .catch(error => console.log('Failed to load Yandex Maps', error));

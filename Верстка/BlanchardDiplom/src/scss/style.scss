@@ -104,331 +104,323 @@ h3 {
 .contaner {
     width: 1920px;
     margin: 0 auto;
+}
+.header {
+    position: relative;
 
-    // Автоматический слайдер с анимацией
-    .swiper-container {
+    &__background-img {
         position: absolute;
-        width: 1920px;
-        height: 800px;
-        overflow: hidden;
+        top: 0;
         z-index: -1;
+    }
+}
+.header-main {
+    @include content-contaner($top:22px,$bottom:22px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000;
+    color: #fff;
+}
+.header-search {
+    @include content-contaner($top:0, $bottom:0);
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.header-banner {
+    @include content-contaner(70px, 120px);
+    max-width: 600px;
+    color: #fff;
 
-        @keyframes backgroundImg {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
 
-        .swiper-slide-active {
-            position:absolute;
-            top: 0;
-            left: 0;
-            animation: backgroundImg 5s ease-in-out infinite;
-        }
+    &__title {
+        font-weight: bold;
+        font-size: 72px;
+        line-height: 83px;
+    }
 
-        .slide_1 {
-            background-image: url('../img/unsplash1.jpg');
-        }
-        .slide_2 {
-            background-image: url('../img/unsplash2.jpg');
-        }
-        .slide_3 {
-            background-image: url('../img/unsplash3.jpg');
+    &__subtitle { 
+        margin-top: 20px;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 30px;
+    }
+    &__button {
+        @include button();
+        margin-top: 92px;
+        font-size: 20px;
+        color:#fff;
+        background-color: #9D5CD0;
+        &:focus {
+            &::after {
+                width: 333px;
+                height: 80px;
+                border-radius: 35px;
+            }
         }
     }
 }
-header {
-    .header {
-        @include content-contaner;
+// Автоматический слайдер с анимацией
+.swiper-container-background {
+    width: 1920px;
+    height: 800px;
+    overflow: hidden;
+
+    @keyframes backgroundImg {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .swiper-slide-active {
+        position:absolute;
+        top: 0;
+        left: 0;
+        animation: backgroundImg 5s ease-in-out infinite;
+    }
+
+    .slide_1 {
+        background-image: url('../img/unsplash1.jpg');
+    }
+    .slide_2 {
+        background-image: url('../img/unsplash2.jpg');
+    }
+    .slide_3 {
+        background-image: url('../img/unsplash3.jpg');
+    }
+}
+// Логотип
+.logo {
+    &__title {
+        font-weight: 600; 
+        font-size: 36px;
+    }
+    &__subtitle {
+        font-size: 15px;
+        font-weight: 100;
+    }
+}
+// Навигация
+.main-nav {
+    &__link {
+        @include p-class();
+        color: #fff;
+    }
+
+    &__items {
         display: flex;
-        padding-top: 22px;
-        padding-bottom: 22px;
+        font-size: 18px;
+        font-weight: 100;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 70px;
+    }
+}
+// Кнопка Войти
+.login {
+    @include p-class();
+    cursor: pointer;
+    font-style: 18px;
+    
+    &::before {
+        content: "\2386";
+        position: relative;
+        top: 3px;
+        margin-right: 6px;
+        font-size: 35px;
+    }
+}
+// Меню с выпадающими списками
+.search-nav {
+    display: flex;
+    &__item {
+        color: #fff;
+        position: relative;
+        font-weight: 100;
+
+        &:not(:last-child) {
+            margin-right: 120px;
+        }
+
+        &:hover {
+            color: #C283F3;
+
+            a::after {
+                top: 1px;
+                border-bottom: none;
+                border-right: none;
+                border-top: 1px solid #C283F3;
+                border-left: 1px solid #C283F3;
+            }
+        }
+        &:hover .search-nav__list {
+            display: block;
+        }
+        
+    }
+    &__link {
+        display: flex;
+        height: 70px;
         align-items: center;
-        justify-content: space-between;
+        &::after {
+            content: ""; //2227
+            position: relative;
+            bottom: 2px;
+            left: 10px;
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-bottom: 1px solid #FFFFFF;
+            border-right: 1px solid #FFFFFF;
+            box-sizing: border-box;
+            transform: rotate(45deg);
+        }      
+    }
+    &__list {
+        position: absolute;
+        top: 70px;
+        display: none;
+    }  
+}
+// Список художников с кастомным скролбаром
+.painter-list {
+    width: 300px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.4);
+
+    .simplebar-vertical {
         background-color: #000;
-        color: #fff;
-        // Логотип
-        &__logo {
-            h1 {
-                font-weight: 600; 
-                font-size: 36px;
-            }
-            p {
-                font-size: 15px;
-                font-weight: 100;
-            }
-        }
-        // Навигация
-        &__nav {
-            position: relative;
-            right: 50px;
-            a {
-                @include p-class();
-                color: #fff;
-            }
-    
-            ul {
-                display: flex;
-                font-size: 18px;
-                font-weight: 100;
-            }
-    
-            li:not(:last-child) {
-                margin-right: 70px;
-            }
-        }
-        // Кнопка Войти
-        &__login {
-            @include p-class();
-            cursor: pointer;
-            font-style: 18px;
-            
-            &::before {
-                content: "\2386";
-                position: relative;
-                top: 3px;
-                margin-right: 6px;
-                font-size: 35px;
-            }
-        }
+        width: 3px !important;
+        height: 222px;
+        top: 38px !important;
+        right: 13px;
     }
-    
-    .header__search {
-        @include content-contaner;
-        align-items: center;
-        background-color: rgba(0, 0, 0, 0.4);
-        padding-top: 30px;
-        padding-bottom: 0;
-        // Меню с выпадающими списками
-        .contaner__menu {
-            display: flex;
-            justify-content: space-between;
-    
-            ul {
-                display: flex;
-            }
-    
-            li {
-                color: #fff;
-                position: relative;
-                padding-bottom: 30px;
-                font-weight: 100;
-        
-                &:not(:last-child) {
-                    margin-right: 120px;
-                }
-        
-                &:hover {
-                    color: #C283F3;
-        
-                    a::after {
-                        top: 1px;
-                        border-bottom: none;
-                        border-right: none;
-                        border-top: 1px solid #C283F3;
-                        border-left: 1px solid #C283F3;
-                    }
-                }
-            }
-    
-            a {
-                &::after {
-                    content: ""; //2227
-                    position: relative;
-                    bottom: 2px;
-                    left: 10px;
-                    display: inline-block;
-                    width: 8px;
-                    height: 8px;
-                    border-bottom: 1px solid #FFFFFF;
-                    border-right: 1px solid #FFFFFF;
-                    box-sizing: border-box;
-                    transform: rotate(45deg);
-                }      
-            }
-            // Отображение выпадающего меню при наведении
-            li:hover .search__menu {
-                display: block;
-            }
-    
-            // Выпадающее меню
-            .search__menu {
+    .simplebar-scrollbar {
+        background-color: #9D5CD0;
+    }
+
+    &__item {
+        position:relative;
+        cursor: pointer;
+        width: 206px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 14px;
+        margin-left: 40px;
+        margin-right: 40px;
+        color: #fff;
+
+        &:not(:last-child){
+            margin-bottom: 20px;
+        }
+        &:first-child {
+            margin-top: 40px;
+        }
+        &:last-child {
+            margin-bottom: 40px;
+        }
+
+        &:hover {
+            outline: 2px solid #9D5CD0;
+        }
+        &:active {
+            outline: 2px solid #D1A9F0;
+            background-color: #C283F3;
+
+            &::after {
+                content: "";
                 position: absolute;
-                top: 46px;
-                display: none;
-                width: 300px;
-                height: 300px;
-                background-color: rgba(0, 0, 0, 0.4);
-        
-                .simplebar-vertical {
-                    background-color: #000;
-                    width: 3px !important;
-                    height: 222px;
-                    top: 38px !important;
-                    right: 13px;
-                }
-                .simplebar-scrollbar {
-                    background-color: #9D5CD0;
-                }
-            
-                .menu__item {
-                    position:relative;
-                    cursor: pointer;
-                    width: 206px;
-                    padding-top: 12px;
-                    padding-bottom: 12px;
-                    padding-left: 14px;
-                    margin-left: 40px;
-                    margin-right: 40px;
-                    color: #fff;
-            
-                    &:not(:last-child){
-                        margin-bottom: 20px;
-                    }
-                    &:first-child {
-                        margin-top: 40px;
-                    }
-                    &:last-child {
-                        margin-bottom: 40px;
-                    }
-            
-                    &:hover {
-                        outline: 2px solid #9D5CD0;
-                    }
-                    &:active {
-                        outline: 2px solid #D1A9F0;
-                        background-color: #C283F3;
-            
-                        &::after {
-                            content: "";
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 220px;
-                            height: 40px;
-                            background-color: #C283F3;
-                            opacity: 0.4;
-                        }
-                    }
-                }
-                .item1{
-                    background-image: url(../img/menu/Rectangle57.jpg);
-                }
-                .item2{
-                    background-image: url(../img/menu/Rectangle58.jpg);
-                }
-                .item3{
-                    background-image: url(../img/menu/Rectangle59.jpg);
-                }
-                .item4{
-                    background-image: url(../img/menu/Rectangle60.jpg);
-                }
+                top: 0;
+                left: 0;
+                width: 220px;
+                height: 40px;
+                background-color: #C283F3;
+                opacity: 0.4;
             }
         }
-        // Форма поиска
-        .form-search {
-            position: relative;
-            bottom: 10px;
-            &:hover {
-                rect {
-                    fill: #C283F3;
-                }
-                path {
-                    fill: #C283F3;
-                }
-                input {
-                    border-bottom: 1px solid #C283F3;
-                }
-            }
-    
-            &:focus-within {
-                rect {
-                    fill: #C283F3;
-                }
-                path {
-                    fill: #C283F3;
-                }
-                input {
-                    color: #C283F3;
-                    border-bottom: 1px solid #fff;
-                }
-            }
-    
-            svg {
-                position: relative;
-                top: 5px;
-                margin-right: 9px;
-        
-                &:focus {
-                    outline: 1px solid #C283F3;
-                }
-            }
-        
-            input {
-                border: none;
-                outline: none;
-                background-color: transparent;
-                border-bottom: 1px solid #fff;
-                width: 218px;
-                font-size: 18px;
-                line-height: 25px;
-                font-weight: 100;
-                color: #fff;
-        
-                &::placeholder {
-                    font-family: "Open Sans";
-                    font-size: 18px;
-                    line-height: 25px;
-                    font-weight: 100;
-                    color: #fff;
-                }
-                &:focus {
-                    outline: 1px solid #C283F3;
-                }
-            }
-        }
-        
     }
-    
-    .header-banner {
-        @include content-contaner(70px, 120px);
-        max-width: 600px;
+    .item1{
+        background-image: url(../img/menu/Rectangle57.jpg);
+    }
+    .item2{
+        background-image: url(../img/menu/Rectangle58.jpg);
+    }
+    .item3{
+        background-image: url(../img/menu/Rectangle59.jpg);
+    }
+    .item4{
+        background-image: url(../img/menu/Rectangle60.jpg);
+    }
+}
+// Форма поиска
+.form-search {
+    &:hover {
+        rect {
+            fill: #C283F3;
+        }
+        path {
+            fill: #C283F3;
+        }
+        input {
+            border-bottom: 1px solid #C283F3;
+        }
+    }
+
+    &:focus-within {
+        rect {
+            fill: #C283F3;
+        }
+        path {
+            fill: #C283F3;
+        }
+        input {
+            color: #C283F3;
+            border-bottom: 1px solid #fff;
+        }
+    }
+
+    svg {
+        position: relative;
+        top: 5px;
+        margin-right: 9px;
+
+        &:focus {
+            outline: 1px solid #C283F3;
+        }
+    }
+
+    input {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        border-bottom: 1px solid #fff;
+        width: 218px;
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: 100;
         color: #fff;
-    
-    
-        h2 {
-            font-weight: bold;
-            font-size: 72px;
-            line-height: 83px;
-        }
-    
-        p { 
-            margin-top: 20px;
-            font-weight: bold;
+
+        &::placeholder {
+            font-family: "Open Sans";
             font-size: 18px;
-            line-height: 30px;
+            line-height: 25px;
+            font-weight: 100;
+            color: #fff;
         }
-        button {
-            @include button();
-            margin-top: 92px;
-            font-size: 20px;
-            color:#fff;
-            background-color: #9D5CD0;
-            &:focus {
-                &::after {
-                    width: 333px;
-                    height: 80px;
-                    border-radius: 35px;
-                }
-            }
+        &:focus {
+            outline: 1px solid #C283F3;
         }
-    } 
+    }
 }
 
 // О нас
@@ -436,7 +428,7 @@ header {
     @include content-contaner(80px, 66px);
     background-color: #fff;
 
-    p {
+    &__subtitle {
         width: 67%;
         margin-top: 15px;
         line-height: 32px;
@@ -446,117 +438,116 @@ header {
 .gallery {
     @include content-contaner($bottom: 75px);
     position: relative;
-    display: flex;
     height: 835px;
     background-image: url(../img/gallery.jpg);
     color:#fff;
     overflow: hidden;
-
-    .swiper-container-gallery {
-        overflow: hidden;
-        margin-top: 85px;
-
-        .swiper-wrapper {
-            overflow: hidden;
-        }
-        
-        .swiper-slide {
-            height: 350px;
-            width: 350px;
-          }
-    
-        .swiper-button-prev {
-            @include swiper-button;
-            left: 605px;
-        }
-    
-        .swiper-button-next {
-            @include swiper-button;
-            left: 705px;
-        }
-    
-        .swiper-pagination {
-            width: 100px;
-            height: auto;
-            top: 118px;
-            left: 620px;
+    &__title {
+        margin-bottom: 20px;
+    }
+    &__contaner{
+        display: flex;
+        height: 740px;
+    }
+    &__filter {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-width: 450px;
+    }
+    &__info {
+        width: 400px;
+        font-weight: 600;
+        line-height: 32px;
+        a {
+            color: #9D5CD0;
         }
     }
-    
-    .column-one {
-        min-width: 450px;
+}
+.select {
+    cursor: pointer;
+    margin-top: 18px;
+    width: 400px;
+    &__title {
+        margin-bottom: 25px;
+    }
 
-        .filter {
-            margin-top: 25px;
-        }
+    &__header {
+        position: relative;
+        display: flex;
+        padding: 10px;
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 6px;
+    }
 
-        .select {
-            cursor: pointer;
-            margin-top: 18px;
-            width: 400px;
+    &__icon {
+        position: absolute;
+        right: 14px;
+        top: 14px;
+        width: 7px;
+        height: 7px;
+        border-right: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        transform: rotate(45deg);
+    }
+
+    &__body {
+        border-radius: 6px;
+        border: 1px solid #999;
+        display: none;
+    }
+    &__item {
+        padding: 10px;
+        color: #999;
+
+        &:not(:last-child){
+            border-bottom: 1px solid #999;
+        } 
+    }
+
+    &.is-active .select__body{
+        display: block;
+    }
     
-            &__header {
-                position: relative;
-                display: flex;
-                padding: 10px;
-                color: #fff;
-                border: 1px solid #fff;
-                border-radius: 6px;
-            }
-        
-            &__icon {
-                position: absolute;
-                right: 14px;
-                top: 14px;
-                width: 7px;
-                height: 7px;
-                border-right: 1px solid #fff;
-                border-bottom: 1px solid #fff;
-                transform: rotate(45deg);
-            }
-        
-            &__body {
-                border-radius: 6px;
-                border: 1px solid #999;
-                display: none;
-            }
-            &__item {
-                padding: 10px;
-                color: #999;
-        
-                &:not(:last-child){
-                    border-bottom: 1px solid #999;
-                }
-                
-            }
+    &.is-active .select__icon{
+        border-right: none;
+        border-bottom: none;
+        border-left: 1px solid #fff;
+        border-top: 1px solid #fff;
+    }
     
-            &.is-active .select__body{
-                display: block;
-            }
-            
-            &.is-active .select__icon{
-                border-right: none;
-                border-bottom: none;
-                border-left: 1px solid #fff;
-                border-top: 1px solid #fff;
-            }
-            
-            .hidden-item {
-                display: none;
-            }
-        }
+    .hidden-item {
+        display: none;
+    }
+}
+.swiper-container-gallery {
+    overflow: hidden;
+
+    .swiper-wrapper {
+        overflow: hidden;
+    }
     
-        .info {
-            position: absolute;
-            width: 400px;
-            bottom: 65px;
-            font-weight: 600;
-            line-height: 32px;
-    
-            a {
-                color: #9D5CD0;
-            }
-        }
+    .swiper-slide {
+        height: 350px;
+        width: 350px;
+      }
+
+    .swiper-button-prev {
+        @include swiper-button;
+        left: 605px;
+    }
+
+    .swiper-button-next {
+        @include swiper-button;
+        left: 705px;
+    }
+
+    .swiper-pagination {
+        width: 100px;
+        height: auto;
+        top: 118px;
+        left: 620px;
     }
 }
 // Каталог
@@ -567,18 +558,8 @@ header {
     &__header {
         display: flex;
     }
-    ul {
-        position: relative;
-        top: 12px;
-        right: 8px;
-        display: flex;
 
-        li{
-            margin-left: 50px;
-        }
-    }
-
-    .catalog_text {
+    &__text {
         margin-top: 19px;
         line-height: 31px;
         margin-bottom: 40px;
@@ -586,120 +567,119 @@ header {
     }
 
     &__body {
-        display: flex;
-
-        .card {
-          width: 750px;
-          margin-right: 50px;
-
-          .name {
-            font-size: 25px;
-            line-height: 33px;
-            margin-top: 30px;            
-          }
-          .date {
-              font-size: 12px;
-              margin-top: 10px;
-              color:#999
-          }
-          .info {
-              margin-top: 7px;
-              font-size: 16px;
-              line-height: 32px;
-          }
+        display: flex; 
+    }
+    .ui-state-active {
+        .age-accordion__button::after {
+            content: "";
+            top: 0;
+            border-top: none;
+            border-left: none;
+            border-bottom: 1px solid #000;
+            border-right: 1px solid #000;
         }
+    }
+    .ui-accordion-content-active {
+        padding-top: 16px;
+        padding-bottom: 22px;
+        padding-left: 10px;
+        margin: 0 !important;
+        padding: 0;
+    }
+    .ui-accordion-header {
+        margin: 0 !important;
+    }
+    
+}
+.language-list {
+    position: relative;
+    top: 12px;
+    right: 8px;
+    display: flex;
 
-        .age {
-            width: 800px;
-            .ui-accordion-header {
-                margin: 0;
-                padding: 0;
+    &__item {
+        margin-left: 50px;
+    }
+}
+.biography-card {
+    width: 750px;
+    margin-right: 50px;
+
+    &__name {
+      font-size: 25px;
+      line-height: 33px;
+      margin-top: 30px;            
+    }
+    &__date {
+        font-size: 12px;
+        margin-top: 10px;
+        color:#999
+    }
+    &__text {
+        margin-top: 7px;
+        font-size: 16px;
+        line-height: 32px;
+    }
+}
+.age-accordion {
+    width: 800px;
+    &__header {
+        display: flex !important;
+        align-items: center;
+        border-top: 1px solid #cacaca;
+        border-bottom: 1px solid #cacaca;
+        height: 113px;
+
+        &:nth-child(13){
+            border-bottom: 1px solid #cacaca;
+        }
+    }
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px; 
+    }
+    &__button {
+        margin-left: auto;
+        width: 50px;
+        height: 50px;
+        background-color: #ececec;
+        border-radius: 50%;
+        border: none;
+
+        &::after {
+            content: "";
+            position: relative;
+            top: 3px;
+            left: 12px;
+            display: block;
+            width: 12px;
+            height: 12px;
+            border-top: 1px solid #000;
+            border-left: 1px solid #000;
+            transform: rotate(45deg);
+        }
+    }
+    &__list {
+        padding: 25px 0 0 0!important;
+        height: 315px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        li {
+            cursor: pointer;
+            line-height: 32px;
+            margin-left: 0;
+            width: 258px;
+            &:hover {
+                color: #9D5CD0;
             }
-            .age-item {
-                display: flex;
-                align-items: center;
-                border-top: 1px solid #cacaca;
-                padding-top: 32px;
-                padding-bottom: 32px;
 
-                &:nth-child(13){
-                    border-bottom: 1px solid #cacaca;
-                }
-
-                p {
-                   font-size: 24px;
-                   font-weight: 600;
-                   line-height: 32px; 
-                }
-
-                button {
-                    margin-left: auto;
-                    width: 50px;
-                    height: 50px;
-                    background-color: #ececec;
-                    border-radius: 50%;
-                    border: none;
-
-                    &::after {
-                        content: "";
-                        position: relative;
-                        top: 3px;
-                        left: 12px;
-                        display: block;
-                        width: 12px;
-                        height: 12px;
-                        border-top: 1px solid #000;
-                        border-left: 1px solid #000;
-                        transform: rotate(45deg);
-                    }
-                }
-            }
-
-            .ui-state-active {
-                border-bottom: 1px solid #cacaca;
-                button::after {
-                    content: "";
-                    top: 0;
-                    border-top: none;
-                    border-left: none;
-                    border-bottom: 1px solid #000;
-                    border-right: 1px solid #000;
-                }
-            }
-
-            .ui-accordion-content-active {
-                padding-top: 16px;
-                padding-bottom: 22px;
-                padding-left: 10px;
-                margin: 0;
-            }
-            
-            ul {
-                padding-top: 25px;
-                padding-bottom: 38px;
-                height: 300px;
-                display: flex;
-                flex-direction: column;
-	            flex-wrap: wrap;
-                li {
-                    cursor: pointer;
-                    line-height: 1;
-                    margin-left: 0;
-                    width: 258px;
-                    &:not(:nth-child(9n+1)) {
-                        margin-top: 15px;
-                    }
-                    &:hover {
-                        color: #9D5CD0;
-                    }
-
-                }
-                
-            }
         }
         
     }
 }
+
 // События
 .events {
     @include content-contaner($top: 75px, $bottom: 70px);
@@ -1088,6 +1068,7 @@ header {
         }
     }
     .map {
+        position: relative;
         padding-top: 65px;
     }
     /* Работа с картой Яндекс */
@@ -1103,6 +1084,7 @@ header {
     [class*="copyright__content"] {
     display: none !important;
     }
+
 }
 
 footer {
