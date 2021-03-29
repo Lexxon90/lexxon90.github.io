@@ -78,6 +78,7 @@ h3 {
 @mixin swiper-button {
     width: 30px;
     height: 30px;
+    border: 2px solid #666;
     background-color: #666;
     border-radius: 50%;
     top: 130px;
@@ -85,6 +86,17 @@ h3 {
     &::after {
         font-size: 15px;
         color: #fff;
+    }
+    &:hover {
+        background-color: #9D5CD0;
+        border: 2px solid #9D5CD0;
+    }
+    &:active {
+        background-color: #7943A4;
+        border: 2px solid #D1A9F0;
+    }
+    &:focus {
+        border: 2px solid #D1A9F0;
     }
 }
 
@@ -272,6 +284,8 @@ h3 {
         display: flex;
         height: 70px;
         align-items: center;
+        transition: all 0.3s ease-in;
+        
         &::after {
             content: ""; //2227
             position: relative;
@@ -290,6 +304,7 @@ h3 {
         position: absolute;
         top: 70px;
         display: none;
+        transition: all 2s linear;
     }  
 }
 // Список художников с кастомным скролбаром
@@ -596,9 +611,40 @@ h3 {
     top: 12px;
     right: 8px;
     display: flex;
-
     &__item {
+        cursor: pointer;
+        position: relative;
         margin-left: 50px;
+        &:hover {
+            filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
+            border-radius: 29px;
+        }
+        &:active &:focus {
+            &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                top: -2px;
+                left: -2px;
+                width: 46px;
+                height: 46px;
+                border: 2px solid #7943A4;
+                border-radius: 50%;
+            }
+        } 
+    }
+    &__selected {
+        &::after {
+            content: "";
+            position: absolute;
+            top: -12px;
+            left: -12px;
+            display: block;
+            width: 66px;
+            height: 66px;
+            border: 2px solid #9D5CD0;
+            border-radius: 50%;
+        }
     }
 }
 .biography-card {
@@ -633,6 +679,41 @@ h3 {
         &:nth-child(13){
             border-bottom: 1px solid #cacaca;
         }
+        &:hover {
+            color: #9D5CD0;
+            border-top: 1px solid #9D5CD0;
+            border-bottom: 1px solid #9D5CD0;
+            .age-accordion__button {
+                background-color: #9D5CD0;
+                border: 2px solid #9D5CD0;
+                &::after {
+                    border-color: #fff;
+                }
+            }
+        }
+        &:active {
+            color: #7943A4;
+            border-top: 1px solid #7943A4;
+            border-bottom: 1px solid #7943A4;
+            .age-accordion__button {
+                background-color: #7943A4;
+                border: 2px solid #D1A9F0;
+                &::after {
+                    border-color: #fff;
+                }
+            }
+        }
+        &:focus {
+            &::after {
+                content: "";
+                position: absolute;
+                top: -5px;
+                left: -5px;
+                width: 805px;
+                height: 135px;
+                border: 2px solid #7943A4;
+            }
+        }
     }
     &__title {
         font-size: 24px;
@@ -644,14 +725,14 @@ h3 {
         width: 50px;
         height: 50px;
         background-color: #ececec;
+        border: 2px solid #ececec;
         border-radius: 50%;
-        border: none;
 
         &::after {
             content: "";
             position: relative;
             top: 3px;
-            left: 12px;
+            left: 10px;
             display: block;
             width: 12px;
             height: 12px;
@@ -670,11 +751,19 @@ h3 {
             cursor: pointer;
             line-height: 32px;
             margin-left: 0;
-            width: 258px;
+        }
+        p{
+            display: inline;
             &:hover {
                 color: #9D5CD0;
+                border-bottom: 1px solid #9D5CD0;
             }
-
+            &:active {
+                color: #7943A4;
+            }
+            &:focus {
+                border: 1px solid #7943A4;
+            }
         }
         
     }
@@ -688,52 +777,8 @@ h3 {
         display:flex;
         flex-wrap: wrap;
         margin-top: 20px;
-        .card-hidden {
-            display: none;
-        }
-        .event-card {
-            position: relative;
-            width: 500px;
-            height: 700px;
-            outline: 1px solid #999;
-            &:not(:nth-child(3n+1)){
-                margin-left: 50px;
-            }
-            &:nth-child(n+4){
-                margin-top: 50px;
-            }
-            .date {
-                margin-top: 11px;
-                margin-right: 19px;
-                text-align: right;
-                color: #999;
-                font-size: 12px;
-                font-weight: 600;
-                line-height: 15px;
-            }
-            .name {
-                margin-top: 4px;
-                margin-left: 50px;
-                margin-right: 50px;
-                font-weight: 600;
-                font-size: 24px;
-                line-height: 33px;
-            }
-            .info {
-                margin-left: 50px;
-                margin-right: 50px;
-                line-height: 32px;
-            }
-            a {
-                position: absolute;
-                bottom: 48px;
-                left: 50px;
-                border-bottom: 1px solid #9D5CD0
-            }
-    
-        }
     }
-    button {
+    &__button {
         @include button;
         display: block;
         width: 180px;
@@ -748,166 +793,232 @@ h3 {
             }
         }
     }
+    &__hidden {
+        display: none;
+    }
 }
+.event-card {
+    position: relative;
+    width: 500px;
+    height: 700px;
+    outline: 1px solid #999;
+    &:not(:nth-child(3n+1)){
+        margin-left: 50px;
+    }
+    &:nth-child(n+4){
+        margin-top: 50px;
+    }
+    &__date {
+        margin-top: 11px;
+        margin-right: 19px;
+        text-align: right;
+        color: #999;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 15px;
+    }
+    &__name {
+        margin-top: 4px;
+        margin-left: 50px;
+        margin-right: 50px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 33px;
+    }
+    &__text {
+        margin-left: 50px;
+        margin-right: 50px;
+        line-height: 32px;
+    }
+    &__link {
+        position: absolute;
+        bottom: 48px;
+        left: 50px;
+        border-bottom: 1px solid #9D5CD0;
+        &:hover {
+            color: #9D5CD0;
+            border-color: #9D5CD0;
+        }
+        &:active {
+            color: #7943A4;
+            border-color: #7943A4;
+        }
+        &:focus {
+            &::after {
+                content: "";
+                position: absolute;
+                top: -2px;
+                left: -2px;
+                width: 90px;
+                height: 20px;
+                border: 1px solid #7943A4;
+            }
+        }
+    }
+
+}
+
+
 // Издания
-.books-contaner {
+.books {
     @include content-contaner($top:80px, $bottom:67px);
     display: flex;
     background-image: url(../img/books.jpg);
     color: #fff;
 
-    .books {
+    &__filter {
         width: 610px;
 
-        .checkbox {
-            display: flex;
-            flex-direction: column;
+    }
+}
+.books-checkbox {
+    display: flex;
+    flex-direction: column;
 
-            &-header {
-                margin-top: 15px;
-                margin-bottom: 10px;
-                font-weight: bold;
-                font-size: 16px;
-                line-height: 32px;
-            }
-            .label-check {
-                cursor: pointer;
-                position: relative;
-                padding-left: 24px;
-                transition: color .3s ease-in-out ;
+    &__header {
+        margin-top: 15px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 32px;
+    }
+    &__label-check {
+        cursor: pointer;
+        position: relative;
+        padding-left: 24px;
+        transition: color .3s ease-in-out ;
 
-                &:not(:last-child) {
-                    margin-bottom: 16px;
-                }
-            }
-            &-item {
-                display: none;
-            }
-            &-item + span {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 12px;
-                height: 12px;
-                border: 1px solid #fff;
-            }
-            &-item:checked + span {
-                border: 1px solid #C283F3;
-                transition: border .3s ease-in-out ;
-            }
-            &-item + span::before {
-                content: '\25CF';
-                position: absolute;
-                bottom: 0;left: 1px;
-                opacity: 0;
-                color: #C283F3;
-                transition: opacity .3s ease-in-out ;
-            }
-            &-item:checked + span::before{
-                opacity: 1;
-            }
+        &:not(:last-child) {
+            margin-bottom: 16px;
         }
-        .cost {
-            margin-top: 30px;
-            &__header {
-                font-weight: bold;
-                margin-bottom: 10px;
-                line-height: 32px;
-            }
-            &__contaner{
-                display: flex;
-                width: 277px;
-                border: 1px solid #999;
-                border-radius: 6px;
-                p {
-                    font-weight: normal;
-                    margin: 11px 10px;
-                }
-                input {
-                    width: 73px;
-                    color: #fff;
-                    font-size: 16px;
-                    background-color: #9D5CD0;
-                    border: none;
-                }
-
+    }
+    &__item {
+        display: none;
+    }
+    &__item + span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 12px;
+        height: 12px;
+        border: 1px solid #fff;
+    }
+    &__item:checked + span {
+        border: 1px solid #C283F3;
+        transition: border .3s ease-in-out ;
+    }
+    &__item + span::before {
+        content: '\25CF';
+        position: absolute;
+        bottom: 0;left: 1px;
+        opacity: 0;
+        color: #C283F3;
+        transition: opacity .3s ease-in-out ;
+    }
+    &__item:checked + span::before{
+        opacity: 1;
+    }
+}
+.books-input {
+    margin-top: 30px;
+    &__header {
+        font-weight: bold;
+        margin-bottom: 10px;
+        line-height: 32px;
+    }
+    &__contaner{
+        display: flex;
+        width: 277px;
+        border: 1px solid #999;
+        border-radius: 6px;
+    }
+    &__text {
+        font-weight: normal;
+        margin: 11px 10px;
+    }
+    &__input {
+        width: 73px;
+        color: #fff;
+        font-size: 16px;
+        background-color: #9D5CD0;
+        border: none;
+    }
+}
+.books-item {
+    position: relative;
+    max-width: 350px;
+    height: 512px;
+    &__name {
+        margin-top: 23px;
+        font-weight: 600;
+    }
+    &__autor {
+        margin-top: 10px;
+    }
+    &__cost {
+        position: absolute;
+        bottom: 80px;
+        right: -6px;
+        font-style: italic;
+    }
+    &__button {
+        @include button();
+        cursor:pointer;
+        margin-top: 15px;
+        color: #fff;
+        padding: 10px 28px;
+        &:focus {
+            &::after {
+                width: 126px;
+                height: 46px;
+                border-radius: 24px;
             }
         }
     }
-    .books_list {
-        position: relative;
-        margin-left: 163px;
-        padding-top: 94px;
-        padding-bottom: 10px;
-        padding-left: 10px;
-        overflow: hidden;
-        .books__item{
-            position: relative;
-            max-width: 350px;
-            height: 512px;
-            .name {
-                margin-top: 23px;
-                font-weight: 600;
-            }
-            .autor {
-                margin-top: 10px;
-            }
-            .cost {
-                position: absolute;
-                bottom: 80px;
-                right: -6px;
-                font-style: italic;
-            }
-            button {
-                @include button();
-                cursor:pointer;
-                margin-top: 15px;
-                color: #fff;
-                padding: 10px 28px;
-                &:focus {
-                    &::after {
-                        width: 126px;
-                        height: 46px;
-                        border-radius: 24px;
-                    }
-                }
-            }
-            
-        }
-        .swiper-pagination {
-            position: absolute;
-            height: 20px;
-            width: 35px;
-            top: 41px;
-            left: 55px;
-            text-align: unset;
-        }
+    
+}
+.books-list {
+    position: relative;
+    margin-left: 163px;
+    padding-top: 94px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    overflow: hidden;
+    .swiper-pagination {
+        position: absolute;
+        height: 20px;
+        width: 35px;
+        top: 41px;
+        left: 55px;
+        text-align: unset;
+    }
 
-        .swiper-button-next {
-            position: absolute;
-            @include swiper-button;
-            top: 54px;
-            left: 110px;
-        }
-        .swiper-button-prev {
-            position: absolute;
-            @include swiper-button;
-            top: 54px;
-        }
+    .swiper-button-next {
+        position: absolute;
+        @include swiper-button;
+        top: 54px;
+        left: 110px;
+    }
+    .swiper-button-prev {
+        position: absolute;
+        @include swiper-button;
+        top: 54px;
     }
 }
 
+// Проекты
 .projects {
     @include content-contaner($top:80px);
     background-color: #fff;
-    p {
-        margin-top: 16px;
-        line-height: 32px;
-        width: 65%;
-      span {
-          position: relative;
-      }
-      .text {
+}
+.projects-text {
+    margin-top: 16px;
+    line-height: 32px;
+    width: 65%;
+    &__contaner {
+        position: relative;
+    }
+    &__info {
         position: relative;
         color:#fff;
         margin-left: 9px;
@@ -931,8 +1042,8 @@ h3 {
             width: 16px;
             height: 16px;
         }
-      }
-      .tooltip {
+    }
+    &__tooltip {
         position:absolute;
         bottom: 30px;
         right: -121px;
@@ -954,16 +1065,51 @@ h3 {
             border: 6px solid transparent;
             border-top-color: #cacaca;
         }
-      }
-      .text:hover + .tooltip {
+    }
+    &__info:hover + .projects-text__tooltip {
         opacity: 1;
     }
+    a {
+        color: #9D5CD0;
+        &:hover {
+            border-bottom: 1px solid #9D5CD0;
+        }
+        &:active {
+            color: #7943A4;
+        }
+        &:focus {
+            border: 1px solid #7943A4;
+        }
     }
-    .sponsors__name {
-        margin-top: 20px;
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 32px;
+}
+.projects-sponsors {
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    
+    &__button {
+        position: relative;
+    }
+    &__slide {
+        cursor: pointer;
+        position: relative;
+        filter: grayscale(100%);
+        &:hover {
+            filter: grayscale(0%);
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 382px;
+                height: 126px;
+                border: 1px solid #7943A4;
+            }
+            
+        }
+
     }
 
     .swiper-container-sponsors {
@@ -972,9 +1118,6 @@ h3 {
         margin-right: 54px;
         margin-left: 75px;
         overflow: hidden;
-    }
-    .button {
-        position: relative;
     }
     .swiper-button-prev {
         @include swiper-button;
@@ -990,87 +1133,98 @@ h3 {
     }
 }
 
+// Контакты
 .contacts {
-    @include content-contaner($top:0px);
-    display: flex;
     background-color: #fff;
+    padding-top: 0;
     padding-bottom: 0;
     padding-left: 0;
     padding-right: 0;
 
+    &__contaners {
+        display: flex;
+    }
+
     h3 {
         padding-left: 160px;
+    }  
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    &__title {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 17px;
     }
+    input {
+        width: 350px;
+        border-radius: 100px;
+        padding: 11px 24px 11px;
+        border: 1px solid #333;
 
-    .form {
-        width: 525px;
-        border-top: 1px solid #cacaca;
-        border-right: 1px solid #cacaca;
-        padding-top: 125px;
-        padding-left: 160px;
-        padding-bottom: 100px;
-
-        .firmname {
-            font-weight: 600;
-            font-size: 24px;
-            line-height: 32px;
-        }
-
-        .adress {
-            font-weight: 400;
+        &::placeholder {
             font-size: 16px;
             line-height: 32px;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-            margin-top: 30px;
-            div{
-                font-size: 24px;
-                line-height: 32px;
-                margin-bottom: 17px;
-            }
-            input {
-                width: 350px;
-                border-radius: 100px;
-                padding: 11px 24px 11px;
-                border: 1px solid #333;
-
-                &::placeholder {
-                    font-size: 16px;
-                    line-height: 32px;
-                    color: #999;
-                }
-            }
-            .input__name{
-                margin-bottom: 25px;
-
-            }
-            button {
-                @include button();
-                margin-top: 23px;
-                padding: 17px 35px;
-                width: 157px;
-
-            }
-        }
-        .telephone {
-            margin-top: 40px;
-            div {
-                margin-bottom: 18px;
-                font-size: 24px;
-                line-height: 32px;
-            }
-            img:first-child{
-                margin-right: 20px;
-            }
-            
+            color: #999;
         }
     }
-    .map {
-        position: relative;
-        padding-top: 65px;
+    &__input-name{
+        margin-bottom: 25px;
+
     }
+    &__button {
+        @include button();
+        margin-top: 23px;
+        padding: 17px 35px;
+        width: 157px;
+        &::after {
+            width: 163px;
+            height: 60px;
+            border-radius: 35px;
+        }
+    }
+}
+.contact-social {
+    margin-top: 40px;
+    div {
+        margin-bottom: 18px;
+        font-size: 24px;
+        line-height: 32px;
+    }
+    img {
+        cursor: pointer;
+    }
+    img:first-child{
+        margin-right: 20px;
+    }
+    
+}
+.contacts-fidback {
+    width: 525px;
+    border-top: 1px solid #cacaca;
+    border-right: 1px solid #cacaca;
+    padding-top: 125px;
+    padding-left: 160px;
+    padding-bottom: 100px;
+
+    &__title {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    &__adress {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+    }
+}
+.map {
+    width: 1238px;
+    height: 700px;
     /* Работа с картой Яндекс */
 
     [class*="ground-pane"] {
@@ -1087,16 +1241,42 @@ h3 {
 
 }
 
+// Footer
 footer {
-    @include content-contaner();
+    @include content-contaner($top:0, $bottom:0);
     display: flex;
+    height: 140px;
+    align-items: center;
     justify-content: space-between;
-    padding-top: 47px;
-    padding-bottom: 47px;
     background-color: #000;
     color: #fff;
 
-    img:not(:last-child){
-        margin-right: 20px;
+    
+}
+
+.social {
+    svg {
+        cursor: pointer;
+
+        &:not(:last-child){
+            margin-right: 20px;
+        }
     }
+    &__vk:hover {
+        path {
+            fill: #C283F3
+        }
+    }
+    &__fb:hover {
+        path {
+            fill: #C283F3
+        }
+    }
+    &__instagram:hover {
+        path {
+            fill: #C283F3
+        }
+    }
+            
+
 }
