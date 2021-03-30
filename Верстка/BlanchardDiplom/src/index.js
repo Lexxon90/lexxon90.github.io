@@ -116,27 +116,26 @@ $( function() {
 } );
 
 // События
-let buttonCard = document.querySelector('.button-card');
+let buttonCard = document.querySelector('.events__button');
 let card = document.querySelectorAll(".event-card");
 
 buttonCard.addEventListener('click', function(){
   if (buttonCard.textContent=="Все события") {
       card.forEach(function(element){
-        element.classList.remove('card-hidden');
+        element.classList.remove('events__hidden');
       })
       buttonCard.textContent = "Скрыть события"
   }
     else {
         for (let i=3; i<card.length; i++ ) {
-          card[i].classList.add('card-hidden');
+          card[i].classList.add('events__hidden');
         }
         buttonCard.textContent = "Все события";
     }
 })
 
 // Чекбокс 
-let checkbox = document.querySelectorAll(".checkbox-item");
-console.log(checkbox);
+let checkbox = document.querySelectorAll(".books-checkbox__item");
 checkbox.forEach(function(element){
   element.addEventListener("click", function(){
     let checkboxItem = document.getElementById(element.id);
@@ -161,7 +160,7 @@ ymaps
             // Уровень масштабирования. Допустимые значения:
             // от 0 (весь мир) до 19.
             zoom: 17,
-            controls: ['geolocationControl']
+            controls: []
     });
     var myPlacemark = new maps.Placemark([55.75846306898368,37.601079499999905], {}, {
         iconLayout: 'default#image',
@@ -171,10 +170,25 @@ ymaps
     });
     var zoomControl = new maps.control.ZoomControl({
       options: {
-          size: "small"
+          size: "small",
+          float: 'none',
+          position: {
+              bottom: '400px',
+              right: '30px'
+          }
+      }
+    });
+    var geolocationControl = new maps.control.GeolocationControl({
+      options: {
+          float: 'none',
+          position: {
+              bottom: '350px',
+              right: '30px'
+          }
       }
     });
     map.controls.add(zoomControl);
+    map.controls.add(geolocationControl);
 
     map.geoObjects.add(myPlacemark);
     
