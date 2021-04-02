@@ -1,12 +1,67 @@
-fetch("https://lexxon90.github.io/HTML-Code/BlanchardDiplom/src/catalog.json")
+fetch("http://localhost:8080/src/catalog.json")
   .then(function (response) {
     return response.json();
   })
   .then(function (response) {
     let catalog = response;
     console.log (catalog);
+    let languageItemSelected;
+
+    function addNewList(){
+      // Определяем язык
+      languageItemSelected = document.querySelector('.language-list__selected');
+      console.log(languageItemSelected)
+      // Определяем активную вкладку Аккордиона
+      let acoordionUL = document.querySelector('.ui-accordion-content-active');
+      console.log(acoordionUL)
+      // Формируем список ключей Заданного языка и заданной ячейки
+      keys = Object.keys(catalog[languageItemSelected.id][acoordionUL.id])
+      console.log(keys)
+      // удаляет старый список
+      let catalogItem = document.querySelectorAll('.age-accordion__item');
+      catalogItem.forEach(function(elem){
+        elem.parentNode.removeChild(elem);
+      })
+      // добавляет новый список из JSON
+      for (let i = 1; i <= keys.length; i++){
+        let li = document.createElement('li');
+        li.className="age-accordion__item"
+        let p = document.createElement('p');
+        p.textContent=keys[i];
+        li.appendChild(p);
+        acoordionUL.appendChild(li);
+      }
+      console.log("work")
+    }
     
-    
+    document.querySelectorAll('.age-accordion__header').forEach(item=>{
+      item.addEventListener('click',function() {
+        console.log(this)
+        this.classList.add('age-accordion__header-active')
+        // Определяем язык
+        languageItemSelected = document.querySelector('.language-list__selected');
+        // Определяем активную вкладку Аккордиона
+        let acoordionUL = document.querySelector('.ui-accordion-content-active');
+        // Формируем список ключей Заданного языка и заданной ячейки
+        keys = Object.keys(catalog[languageItemSelected.id][acoordionUL.id])
+        // удаляет старый список
+        let catalogItem = document.querySelectorAll('.age-accordion__item');
+        catalogItem.forEach(function(elem){
+          elem.parentNode.removeChild(elem);
+        })
+        // добавляет новый список из JSON
+        for (let i = 1; i <= keys.length; i++){
+          let li = document.createElement('li');
+          li.className="age-accordion__item"
+          let p = document.createElement('p');
+          p.textContent=keys[i];
+          li.appendChild(p);
+          acoordionUL.appendChild(li);
+        }
+      })
+    });
+
+    // Изменение языка
     let languageItem = document.querySelectorAll('.language-list__item')
     languageItem.forEach(item=>{
       item.addEventListener('click', function(){
@@ -14,17 +69,30 @@ fetch("https://lexxon90.github.io/HTML-Code/BlanchardDiplom/src/catalog.json")
           languageItem[i].classList.remove('language-list__selected')
         }
         this.classList.add('language-list__selected');
-        let languageItemSelected = document.querySelector('.language-list__selected');
-        let languageItemID = languageItemSelected.id;
+        languageItemSelected = document.querySelector('.language-list__selected');
         let catalogInfo = document.querySelector('.catalog__text');
-        catalogInfo.textContent = catalog[languageItemID].info;
+        catalogInfo.textContent = catalog[languageItemSelected.id].info;
       })
     })
 
+    // Изменение карточки деятеля при нажатии на кнопку
     let accordionItem = document.querySelectorAll('.age-accordion__item');
     accordionItem.forEach(item=>{
       item.addEventListener('click', function(){
-        console.log(this.parentElement.id)
+
+        for (let i = 0; i < accordionItem.length; i++) {
+          accordionItem[i].classList.remove('age-accordion__item-select')
+        }
+        this.classList.add('age-accordion__item-select');
+
+        let languageItemSelectedID = document.querySelector('.language-list__selected').id;
+        let parentAccordionItemID = this.parentElement.id;
+        let accordionItemTextContent = this.textContent;
+        catalogAccordionItem = catalog[languageItemSelectedID][parentAccordionItemID][accordionItemTextContent]
+        document.querySelector('.biography-card__img').style.backgroundImage = 'url('+catalogAccordionItem.img+')';
+        document.querySelector('.biography-card__name').textContent = accordionItemTextContent;
+        document.querySelector('.biography-card__date').textContent = catalogAccordionItem.date;
+        document.querySelector('.biography-card__text').textContent = catalogAccordionItem.bio;
       })
     })
     

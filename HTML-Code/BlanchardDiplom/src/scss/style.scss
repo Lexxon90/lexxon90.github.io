@@ -650,7 +650,15 @@ h3 {
 .biography-card {
     width: 750px;
     margin-right: 50px;
-
+    &__img {
+        background-image: url(../img/catalog/domeniko.jpg);
+        width: 750px;
+        height: 470px;
+        background-color: #999;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
     &__name {
       font-size: 25px;
       line-height: 33px;
@@ -764,6 +772,13 @@ h3 {
             &:focus {
                 border: 1px solid #7943A4;
             }
+        }
+        
+    }
+    &__item-select {
+        p {
+            color: #9D5CD0;
+            border-bottom: 1px solid #9D5CD0;
         }
         
     }
