@@ -1,0 +1,864 @@
+"es":{
+    "info": "Los accionistas de las compañías más grandes, que representan un claro ejemplo de un tipo de cultura política continental-Europea, serán declarados que violan las normas universales de ética y moralidad. Como solo una parte del panorama general, que buscan desplazar la fabricación tradicional, la nanotecnología sigue siendo una herencia de los liberales que anhelan estar funcionalmente espaciados en elementos independientes.",
+    "age-01":{
+        "info":"De 1400 a 1499.",
+        "Benedetto di Bindo" : {
+            "img":"img/catalog/benedetto.jpg",
+            "date": "Benedetto di Bindo",
+            "bio": "Benedetto di Bindo" 
+        },
+        "Bergognone, Ambrogio" : {
+            "img":"img/catalog/bergonione.jpg",
+            "date": "Bergognone, Ambrogio",
+            "bio": "Bergognone, Ambrogio" 
+        },
+        "Bissolo, Francesco" : {
+            "img":"img/catalog/bissolo.jpg",
+            "date": "Bissolo, Francesco",
+            "bio": "Bissolo, Francesco" 
+        },
+        "Boltraffio, Giovanni" : {
+            "img":"img/catalog/Boltraffio.jpg",
+            "date": "Boltraffio, Giovanni",
+            "bio": "Boltraffio, Giovanni" 
+        },
+        "Bonsignori, Francesco" : {
+            "img":"img/catalog/Bonsignori.jpg",
+            "date": "Bonsignori, Francesco",
+            "bio": "Bonsignori, Francesco" 
+        },
+        "Botticini, Rafaello" : {
+            "img":"img/catalog/Botticini.jpg",
+            "date": "Botticini, Rafaello",
+            "bio": "Botticini, Rafaello" 
+        },
+        "Bramantino" : {
+            "img":"img/catalog/Bramantino.jpg",
+            "date": "Bramantino",
+            "bio": "Bramantino" 
+        },
+        "Brea, Ludovico" : {
+            "img":"img/catalog/Brea.jpg",
+            "date": "Brea, Ludovico",
+            "bio": "Brea, Ludovico" 
+        },
+        "Biagio d'Antonio Tucci" : {
+            "img":"img/catalog/Biagio.jpg",
+            "date": "Biagio d'Antonio Tucci",
+            "bio": "Biagio d'Antonio Tucci" 
+        },
+        "Vecchietta" : {
+            "img":"img/catalog/Vecchietta.jpg",
+            "date": "Vecchietta",
+            "bio": "Vecchietta" 
+        },
+        "Andrea Verrocchio" : {
+            "img":"img/catalog/andrea.jpg",
+            "date": "Andrea Verrocchio",
+            "bio": "Andrea Verrocchio" 
+        },
+        "Domenico Ghirlandaio" : {
+            "img":"img/catalog/domeniko.jpg",
+            "date": "2 junio 1448 a 11 enero 1494.",
+            "bio": "Uno de los principales artistas florentinos de Quatrocento, fundador de la dinastía artística que continuaron su hermano David y su hijo Ridolfo. Jefe del taller de arte, donde el joven Miguel ángel dominó las habilidades profesionales durante un año. El autor de los ciclos murales, en los que sobresale, con todo tipo de detalles, muestra la vida doméstica de los personajes bíblicos (en su papel actúan los nobles ciudadanos de Florencia con trajes de la época)." 
+        },
+        "Benozzo Gozzoli" : {
+            "img":"img/catalog/benozzo.jpg",
+            "date": "Benozzo Gozzoli",
+            "bio": "Benozzo Gozzoli" 
+        },
+        "Granacci, Francesco" : {
+            "img":"img/catalog/granacci.jpg",
+            "date": "Granacci, Francesco",
+            "bio": "Granacci, Francesco" 
+        },
+        "Gregorio di Cecco" : {
+            "img":"img/catalog/Gregorio.jpg",
+            "date": "Gregorio di Cecco",
+            "bio": "Gregorio di Cecco" 
+        },
+        "Giovanni da Udine" : {
+            "img":"img/catalog/Giovanni.jpg",
+            "date": "Giovanni da Udine",
+            "bio": "Giovanni da Udine" 
+        },
+        "Giovanni di Paolo" : {
+            "img":"img/catalog/GiovanniPaolo.jpg",
+            "date": "Giovanni di Paolo",
+            "bio": "Giovanni di Paolo" 
+        },
+        "Giorgione" : {
+            "img":"img/catalog/Giorgione.jpg",
+            "date": "Giorgione",
+            "bio": "Giorgione" 
+        },
+        "Tarantino, Bernardo" : {
+            "img":"img/catalog/Parentino.jpg",
+            "date": "Tarantino, Bernardo",
+            "bio": "Tarantino, Bernardo" 
+        },
+        "Pezellino" : {
+            "img":"img/catalog/pesello.jpg",
+            "date": "Pezellino",
+            "bio": "Pezellino" 
+        },
+        "Pietro Perugino" : {
+            "img":"img/catalog/Pietro.jpg",
+            "date": "Pietro Perugino",
+            "bio": "Pietro Perugino" 
+        },
+        "Peruzzi, Baldassare" : {
+            "img":"img/catalog/peruzzi.jpg",
+            "date": "Peruzzi, Baldassare",
+            "bio": "Peruzzi, Baldassare" 
+        },
+        "Pisanello" : {
+            "img":"img/catalog/pisanello.jpg",
+            "date": "Pisanello",
+            "bio": "Pisanello" 
+        },
+        "Pinturicchio" : {
+            "img":"img/catalog/Pinturicchio.jpg",
+            "date": "Pinturicchio",
+            "bio": "Pinturicchio" 
+        }
+    },
+    "age-02":{
+        "info":"De 1500 a 1599.",
+        "Benedetto di Bindo" : {
+            "img":"img/catalog/benedetto.jpg",
+            "date": "Benedetto di Bindo",
+            "bio": "Benedetto di Bindo" 
+        },
+        "Bergognone, Ambrogio" : {
+            "img":"img/catalog/bergonione.jpg",
+            "date": "Bergognone, Ambrogio",
+            "bio": "Bergognone, Ambrogio" 
+        },
+        "Bissolo, Francesco" : {
+            "img":"img/catalog/bissolo.jpg",
+            "date": "Bissolo, Francesco",
+            "bio": "Bissolo, Francesco" 
+        },
+        "Boltraffio, Giovanni" : {
+            "img":"img/catalog/Boltraffio.jpg",
+            "date": "Boltraffio, Giovanni",
+            "bio": "Boltraffio, Giovanni" 
+        },
+        "Bonsignori, Francesco" : {
+            "img":"img/catalog/Bonsignori.jpg",
+            "date": "Bonsignori, Francesco",
+            "bio": "Bonsignori, Francesco" 
+        },
+        "Botticini, Rafaello" : {
+            "img":"img/catalog/Botticini.jpg",
+            "date": "Botticini, Rafaello",
+            "bio": "Botticini, Rafaello" 
+        },
+        "Bramantino" : {
+            "img":"img/catalog/Bramantino.jpg",
+            "date": "Bramantino",
+            "bio": "Bramantino" 
+        },
+        "Brea, Ludovico" : {
+            "img":"img/catalog/Brea.jpg",
+            "date": "Brea, Ludovico",
+            "bio": "Brea, Ludovico" 
+        },
+        "Biagio d'Antonio Tucci" : {
+            "img":"img/catalog/Biagio.jpg",
+            "date": "Biagio d'Antonio Tucci",
+            "bio": "Biagio d'Antonio Tucci" 
+        },
+        "Vecchietta" : {
+            "img":"img/catalog/Vecchietta.jpg",
+            "date": "Vecchietta",
+            "bio": "Vecchietta" 
+        },
+        "Andrea Verrocchio" : {
+            "img":"img/catalog/andrea.jpg",
+            "date": "Andrea Verrocchio",
+            "bio": "Andrea Verrocchio" 
+        },
+        "Domenico Ghirlandaio" : {
+            "img":"img/catalog/domeniko.jpg",
+            "date": "2 junio 1448 a 11 enero 1494.",
+            "bio": "Uno de los principales artistas florentinos de Quatrocento, fundador de la dinastía artística que continuaron su hermano David y su hijo Ridolfo. Jefe del taller de arte, donde el joven Miguel ángel dominó las habilidades profesionales durante un año. El autor de los ciclos murales, en los que sobresale, con todo tipo de detalles, muestra la vida doméstica de los personajes bíblicos (en su papel actúan los nobles ciudadanos de Florencia con trajes de la época)." 
+        },
+        "Benozzo Gozzoli" : {
+            "img":"img/catalog/benozzo.jpg",
+            "date": "Benozzo Gozzoli",
+            "bio": "Benozzo Gozzoli" 
+        },
+        "Granacci, Francesco" : {
+            "img":"img/catalog/granacci.jpg",
+            "date": "Granacci, Francesco",
+            "bio": "Granacci, Francesco" 
+        },
+        "Gregorio di Cecco" : {
+            "img":"img/catalog/Gregorio.jpg",
+            "date": "Gregorio di Cecco",
+            "bio": "Gregorio di Cecco" 
+        },
+        "Giovanni da Udine" : {
+            "img":"img/catalog/Giovanni.jpg",
+            "date": "Giovanni da Udine",
+            "bio": "Giovanni da Udine" 
+        },
+        "Giovanni di Paolo" : {
+            "img":"img/catalog/GiovanniPaolo.jpg",
+            "date": "Giovanni di Paolo",
+            "bio": "Giovanni di Paolo" 
+        },
+        "Giorgione" : {
+            "img":"img/catalog/Giorgione.jpg",
+            "date": "Giorgione",
+            "bio": "Giorgione" 
+        },
+        "Tarantino, Bernardo" : {
+            "img":"img/catalog/Parentino.jpg",
+            "date": "Tarantino, Bernardo",
+            "bio": "Tarantino, Bernardo" 
+        },
+        "Pezellino" : {
+            "img":"img/catalog/pesello.jpg",
+            "date": "Pezellino",
+            "bio": "Pezellino" 
+        },
+        "Pietro Perugino" : {
+            "img":"img/catalog/Pietro.jpg",
+            "date": "Pietro Perugino",
+            "bio": "Pietro Perugino" 
+        },
+        "Peruzzi, Baldassare" : {
+            "img":"img/catalog/peruzzi.jpg",
+            "date": "Peruzzi, Baldassare",
+            "bio": "Peruzzi, Baldassare" 
+        },
+        "Pisanello" : {
+            "img":"img/catalog/pisanello.jpg",
+            "date": "Pisanello",
+            "bio": "Pisanello" 
+        },
+        "Pinturicchio" : {
+            "img":"img/catalog/Pinturicchio.jpg",
+            "date": "Pinturicchio",
+            "bio": "Pinturicchio" 
+        }
+    },
+    "age-03":{
+        "info":"De 1600 a 1699.",
+        "Benedetto di Bindo" : {
+            "img":"img/catalog/benedetto.jpg",
+            "date": "Benedetto di Bindo",
+            "bio": "Benedetto di Bindo" 
+        },
+        "Bergognone, Ambrogio" : {
+            "img":"img/catalog/bergonione.jpg",
+            "date": "Bergognone, Ambrogio",
+            "bio": "Bergognone, Ambrogio" 
+        },
+        "Bissolo, Francesco" : {
+            "img":"img/catalog/bissolo.jpg",
+            "date": "Bissolo, Francesco",
+            "bio": "Bissolo, Francesco" 
+        },
+        "Boltraffio, Giovanni" : {
+            "img":"img/catalog/Boltraffio.jpg",
+            "date": "Boltraffio, Giovanni",
+            "bio": "Boltraffio, Giovanni" 
+        },
+        "Bonsignori, Francesco" : {
+            "img":"img/catalog/Bonsignori.jpg",
+            "date": "Bonsignori, Francesco",
+            "bio": "Bonsignori, Francesco" 
+        },
+        "Botticini, Rafaello" : {
+            "img":"img/catalog/Botticini.jpg",
+            "date": "Botticini, Rafaello",
+            "bio": "Botticini, Rafaello" 
+        },
+        "Bramantino" : {
+            "img":"img/catalog/Bramantino.jpg",
+            "date": "Bramantino",
+            "bio": "Bramantino" 
+        },
+        "Brea, Ludovico" : {
+            "img":"img/catalog/Brea.jpg",
+            "date": "Brea, Ludovico",
+            "bio": "Brea, Ludovico" 
+        },
+        "Biagio d'Antonio Tucci" : {
+            "img":"img/catalog/Biagio.jpg",
+            "date": "Biagio d'Antonio Tucci",
+            "bio": "Biagio d'Antonio Tucci" 
+        },
+        "Vecchietta" : {
+            "img":"img/catalog/Vecchietta.jpg",
+            "date": "Vecchietta",
+            "bio": "Vecchietta" 
+        },
+        "Andrea Verrocchio" : {
+            "img":"img/catalog/andrea.jpg",
+            "date": "Andrea Verrocchio",
+            "bio": "Andrea Verrocchio" 
+        },
+        "Domenico Ghirlandaio" : {
+            "img":"img/catalog/domeniko.jpg",
+            "date": "2 junio 1448 a 11 enero 1494.",
+            "bio": "Uno de los principales artistas florentinos de Quatrocento, fundador de la dinastía artística que continuaron su hermano David y su hijo Ridolfo. Jefe del taller de arte, donde el joven Miguel ángel dominó las habilidades profesionales durante un año. El autor de los ciclos murales, en los que sobresale, con todo tipo de detalles, muestra la vida doméstica de los personajes bíblicos (en su papel actúan los nobles ciudadanos de Florencia con trajes de la época)." 
+        },
+        "Benozzo Gozzoli" : {
+            "img":"img/catalog/benozzo.jpg",
+            "date": "Benozzo Gozzoli",
+            "bio": "Benozzo Gozzoli" 
+        },
+        "Granacci, Francesco" : {
+            "img":"img/catalog/granacci.jpg",
+            "date": "Granacci, Francesco",
+            "bio": "Granacci, Francesco" 
+        },
+        "Gregorio di Cecco" : {
+            "img":"img/catalog/Gregorio.jpg",
+            "date": "Gregorio di Cecco",
+            "bio": "Gregorio di Cecco" 
+        },
+        "Giovanni da Udine" : {
+            "img":"img/catalog/Giovanni.jpg",
+            "date": "Giovanni da Udine",
+            "bio": "Giovanni da Udine" 
+        },
+        "Giovanni di Paolo" : {
+            "img":"img/catalog/GiovanniPaolo.jpg",
+            "date": "Giovanni di Paolo",
+            "bio": "Giovanni di Paolo" 
+        },
+        "Giorgione" : {
+            "img":"img/catalog/Giorgione.jpg",
+            "date": "Giorgione",
+            "bio": "Giorgione" 
+        },
+        "Tarantino, Bernardo" : {
+            "img":"img/catalog/Parentino.jpg",
+            "date": "Tarantino, Bernardo",
+            "bio": "Tarantino, Bernardo" 
+        },
+        "Pezellino" : {
+            "img":"img/catalog/pesello.jpg",
+            "date": "Pezellino",
+            "bio": "Pezellino" 
+        },
+        "Pietro Perugino" : {
+            "img":"img/catalog/Pietro.jpg",
+            "date": "Pietro Perugino",
+            "bio": "Pietro Perugino" 
+        },
+        "Peruzzi, Baldassare" : {
+            "img":"img/catalog/peruzzi.jpg",
+            "date": "Peruzzi, Baldassare",
+            "bio": "Peruzzi, Baldassare" 
+        },
+        "Pisanello" : {
+            "img":"img/catalog/pisanello.jpg",
+            "date": "Pisanello",
+            "bio": "Pisanello" 
+        },
+        "Pinturicchio" : {
+            "img":"img/catalog/Pinturicchio.jpg",
+            "date": "Pinturicchio",
+            "bio": "Pinturicchio" 
+        }
+    },
+    "age-04":{
+        "info":"De 1700 a 1799.",
+        "Benedetto di Bindo" : {
+            "img":"img/catalog/benedetto.jpg",
+            "date": "",
+            "bio": "" 
+        },
+        "Bergognone, Ambrogio" : {
+            "img":"img/catalog/bergonione.jpg",
+            "date": "Bergognone, Ambrogio",
+            "bio": "Bergognone, Ambrogio" 
+        },
+        "Bissolo, Francesco" : {
+            "img":"img/catalog/bissolo.jpg",
+            "date": "Bissolo, Francesco",
+            "bio": "Bissolo, Francesco" 
+        },
+        "Boltraffio, Giovanni" : {
+            "img":"img/catalog/Boltraffio.jpg",
+            "date": "Boltraffio, Giovanni",
+            "bio": "Boltraffio, Giovanni" 
+        },
+        "Bonsignori, Francesco" : {
+            "img":"img/catalog/Bonsignori.jpg",
+            "date": "Bonsignori, Francesco",
+            "bio": "Bonsignori, Francesco" 
+        },
+        "Botticini, Rafaello" : {
+            "img":"img/catalog/Botticini.jpg",
+            "date": "Botticini, Rafaello",
+            "bio": "Botticini, Rafaello" 
+        },
+        "Bramantino" : {
+            "img":"img/catalog/Bramantino.jpg",
+            "date": "Bramantino",
+            "bio": "Bramantino" 
+        },
+        "Brea, Ludovico" : {
+            "img":"img/catalog/Brea.jpg",
+            "date": "Brea, Ludovico",
+            "bio": "Brea, Ludovico" 
+        },
+        "Biagio d'Antonio Tucci" : {
+            "img":"img/catalog/Biagio.jpg",
+            "date": "Biagio d'Antonio Tucci",
+            "bio": "Biagio d'Antonio Tucci" 
+        },
+        "Vecchietta" : {
+            "img":"img/catalog/Vecchietta.jpg",
+            "date": "Vecchietta",
+            "bio": "Vecchietta" 
+        },
+        "Andrea Verrocchio" : {
+            "img":"img/catalog/andrea.jpg",
+            "date": "Andrea Verrocchio",
+            "bio": "Andrea Verrocchio" 
+        },
+        "Domenico Ghirlandaio" : {
+            "img":"img/catalog/domeniko.jpg",
+            "date": "2 junio 1448 a 11 enero 1494.",
+            "bio": "Uno de los principales artistas florentinos de Quatrocento, fundador de la dinastía artística que continuaron su hermano David y su hijo Ridolfo. Jefe del taller de arte, donde el joven Miguel ángel dominó las habilidades profesionales durante un año. El autor de los ciclos murales, en los que sobresale, con todo tipo de detalles, muestra la vida doméstica de los personajes bíblicos (en su papel actúan los nobles ciudadanos de Florencia con trajes de la época)." 
+        },
+        "Benozzo Gozzoli" : {
+            "img":"img/catalog/benozzo.jpg",
+            "date": "Benozzo Gozzoli",
+            "bio": "Benozzo Gozzoli" 
+        },
+        "Granacci, Francesco" : {
+            "img":"img/catalog/granacci.jpg",
+            "date": "Granacci, Francesco",
+            "bio": "Granacci, Francesco" 
+        },
+        "Gregorio di Cecco" : {
+            "img":"img/catalog/Gregorio.jpg",
+            "date": "Gregorio di Cecco",
+            "bio": "Gregorio di Cecco" 
+        },
+        "Giovanni da Udine" : {
+            "img":"img/catalog/Giovanni.jpg",
+            "date": "Giovanni da Udine",
+            "bio": "Giovanni da Udine" 
+        },
+        "Giovanni di Paolo" : {
+            "img":"img/catalog/GiovanniPaolo.jpg",
+            "date": "Giovanni di Paolo",
+            "bio": "Giovanni di Paolo" 
+        },
+        "Giorgione" : {
+            "img":"img/catalog/Giorgione.jpg",
+            "date": "Giorgione",
+            "bio": "Giorgione" 
+        },
+        "Tarantino, Bernardo" : {
+            "img":"img/catalog/Parentino.jpg",
+            "date": "Tarantino, Bernardo",
+            "bio": "Tarantino, Bernardo" 
+        },
+        "Pezellino" : {
+            "img":"img/catalog/pesello.jpg",
+            "date": "Pezellino",
+            "bio": "Pezellino" 
+        },
+        "Pietro Perugino" : {
+            "img":"img/catalog/Pietro.jpg",
+            "date": "Pietro Perugino",
+            "bio": "Pietro Perugino" 
+        },
+        "Peruzzi, Baldassare" : {
+            "img":"img/catalog/peruzzi.jpg",
+            "date": "Peruzzi, Baldassare",
+            "bio": "Peruzzi, Baldassare" 
+        },
+        "Pisanello" : {
+            "img":"img/catalog/pisanello.jpg",
+            "date": "Pisanello",
+            "bio": "Pisanello" 
+        },
+        "Pinturicchio" : {
+            "img":"img/catalog/Pinturicchio.jpg",
+            "date": "Pinturicchio",
+            "bio": "Pinturicchio" 
+        }
+    },
+    "age-05":{
+        "info":"De 1800 a 1899.",
+        "Benedetto di Bindo" : {
+            "img":"img/catalog/benedetto.jpg",
+            "date": "Benedetto di Bindo",
+            "bio": "Benedetto di Bindo" 
+        },
+        "Bergognone, Ambrogio" : {
+            "img":"img/catalog/bergonione.jpg",
+            "date": "Bergognone, Ambrogio",
+            "bio": "Bergognone, Ambrogio" 
+        },
+        "Bissolo, Francesco" : {
+            "img":"img/catalog/bissolo.jpg",
+            "date": "Bissolo, Francesco",
+            "bio": "Bissolo, Francesco" 
+        },
+        "Boltraffio, Giovanni" : {
+            "img":"img/catalog/Boltraffio.jpg",
+            "date": "Boltraffio, Giovanni",
+            "bio": "Boltraffio, Giovanni" 
+        },
+        "Bonsignori, Francesco" : {
+            "img":"img/catalog/Bonsignori.jpg",
+            "date": "Bonsignori, Francesco",
+            "bio": "Bonsignori, Francesco" 
+        },
+        "Botticini, Rafaello" : {
+            "img":"img/catalog/Botticini.jpg",
+            "date": "Botticini, Rafaello",
+            "bio": "Botticini, Rafaello" 
+        },
+        "Bramantino" : {
+            "img":"img/catalog/Bramantino.jpg",
+            "date": "Bramantino",
+            "bio": "Bramantino" 
+        },
+        "Brea, Ludovico" : {
+            "img":"img/catalog/Brea.jpg",
+            "date": "Brea, Ludovico",
+            "bio": "Brea, Ludovico" 
+        },
+        "Biagio d'Antonio Tucci" : {
+            "img":"img/catalog/Biagio.jpg",
+            "date": "Biagio d'Antonio Tucci",
+            "bio": "Biagio d'Antonio Tucci" 
+        },
+        "Vecchietta" : {
+            "img":"img/catalog/Vecchietta.jpg",
+            "date": "Vecchietta",
+            "bio": "Vecchietta" 
+        },
+        "Andrea Verrocchio" : {
+            "img":"img/catalog/andrea.jpg",
+            "date": "Andrea Verrocchio",
+            "bio": "Andrea Verrocchio" 
+        },
+        "Domenico Ghirlandaio" : {
+            "img":"img/catalog/domeniko.jpg",
+            "date": "2 junio 1448 a 11 enero 1494.",
+            "bio": "Uno de los principales artistas florentinos de Quatrocento, fundador de la dinastía artística que continuaron su hermano David y su hijo Ridolfo. Jefe del taller de arte, donde el joven Miguel ángel dominó las habilidades profesionales durante un año. El autor de los ciclos murales, en los que sobresale, con todo tipo de detalles, muestra la vida doméstica de los personajes bíblicos (en su papel actúan los nobles ciudadanos de Florencia con trajes de la época)." 
+        },
+        "Benozzo Gozzoli" : {
+            "img":"img/catalog/benozzo.jpg",
+            "date": "Benozzo Gozzoli",
+            "bio": "Benozzo Gozzoli" 
+        },
+        "Granacci, Francesco" : {
+            "img":"img/catalog/granacci.jpg",
+            "date": "Granacci, Francesco",
+            "bio": "Granacci, Francesco" 
+        },
+        "Gregorio di Cecco" : {
+            "img":"img/catalog/Gregorio.jpg",
+            "date": "Gregorio di Cecco",
+            "bio": "Gregorio di Cecco" 
+        },
+        "Giovanni da Udine" : {
+            "img":"img/catalog/Giovanni.jpg",
+            "date": "Giovanni da Udine",
+            "bio": "Giovanni da Udine" 
+        },
+        "Giovanni di Paolo" : {
+            "img":"img/catalog/GiovanniPaolo.jpg",
+            "date": "Giovanni di Paolo",
+            "bio": "Giovanni di Paolo" 
+        },
+        "Giorgione" : {
+            "img":"img/catalog/Giorgione.jpg",
+            "date": "Giorgione",
+            "bio": "Giorgione" 
+        },
+        "Tarantino, Bernardo" : {
+            "img":"img/catalog/Parentino.jpg",
+            "date": "Tarantino, Bernardo",
+            "bio": "Tarantino, Bernardo" 
+        },
+        "Pezellino" : {
+            "img":"img/catalog/pesello.jpg",
+            "date": "Pezellino",
+            "bio": "Pezellino" 
+        },
+        "Pietro Perugino" : {
+            "img":"img/catalog/Pietro.jpg",
+            "date": "Pietro Perugino",
+            "bio": "Pietro Perugino" 
+        },
+        "Peruzzi, Baldassare" : {
+            "img":"img/catalog/peruzzi.jpg",
+            "date": "Peruzzi, Baldassare",
+            "bio": "Peruzzi, Baldassare" 
+        },
+        "Pisanello" : {
+            "img":"img/catalog/pisanello.jpg",
+            "date": "Pisanello",
+            "bio": "Pisanello" 
+        },
+        "Pinturicchio" : {
+            "img":"img/catalog/Pinturicchio.jpg",
+            "date": "Pinturicchio",
+            "bio": "Pinturicchio" 
+        }
+    },
+    "age-06":{
+        "info":"De 1900 a 1999.",
+        "Benedetto di Bindo" : {
+            "img":"img/catalog/benedetto.jpg",
+            "date": "Benedetto di Bindo",
+            "bio": "Benedetto di Bindo" 
+        },
+        "Bergognone, Ambrogio" : {
+            "img":"img/catalog/bergonione.jpg",
+            "date": "Bergognone, Ambrogio",
+            "bio": "Bergognone, Ambrogio" 
+        },
+        "Bissolo, Francesco" : {
+            "img":"img/catalog/bissolo.jpg",
+            "date": "Bissolo, Francesco",
+            "bio": "Bissolo, Francesco" 
+        },
+        "Boltraffio, Giovanni" : {
+            "img":"img/catalog/Boltraffio.jpg",
+            "date": "Boltraffio, Giovanni",
+            "bio": "Boltraffio, Giovanni" 
+        },
+        "Bonsignori, Francesco" : {
+            "img":"img/catalog/Bonsignori.jpg",
+            "date": "Bonsignori, Francesco",
+            "bio": "Bonsignori, Francesco" 
+        },
+        "Botticini, Rafaello" : {
+            "img":"img/catalog/Botticini.jpg",
+            "date": "Botticini, Rafaello",
+            "bio": "Botticini, Rafaello" 
+        },
+        "Bramantino" : {
+            "img":"img/catalog/Bramantino.jpg",
+            "date": "Bramantino",
+            "bio": "Bramantino" 
+        },
+        "Brea, Ludovico" : {
+            "img":"img/catalog/Brea.jpg",
+            "date": "Brea, Ludovico",
+            "bio": "Brea, Ludovico" 
+        },
+        "Biagio d'Antonio Tucci" : {
+            "img":"img/catalog/Biagio.jpg",
+            "date": "Biagio d'Antonio Tucci",
+            "bio": "Biagio d'Antonio Tucci" 
+        },
+        "Vecchietta" : {
+            "img":"img/catalog/Vecchietta.jpg",
+            "date": "Vecchietta",
+            "bio": "Vecchietta" 
+        },
+        "Andrea Verrocchio" : {
+            "img":"img/catalog/andrea.jpg",
+            "date": "Andrea Verrocchio",
+            "bio": "Andrea Verrocchio" 
+        },
+        "Domenico Ghirlandaio" : {
+            "img":"img/catalog/domeniko.jpg",
+            "date": "2 junio 1448 a 11 enero 1494.",
+            "bio": "Uno de los principales artistas florentinos de Quatrocento, fundador de la dinastía artística que continuaron su hermano David y su hijo Ridolfo. Jefe del taller de arte, donde el joven Miguel ángel dominó las habilidades profesionales durante un año. El autor de los ciclos murales, en los que sobresale, con todo tipo de detalles, muestra la vida doméstica de los personajes bíblicos (en su papel actúan los nobles ciudadanos de Florencia con trajes de la época)." 
+        },
+        "Benozzo Gozzoli" : {
+            "img":"img/catalog/benozzo.jpg",
+            "date": "Benozzo Gozzoli",
+            "bio": "Benozzo Gozzoli" 
+        },
+        "Granacci, Francesco" : {
+            "img":"img/catalog/granacci.jpg",
+            "date": "Granacci, Francesco",
+            "bio": "Granacci, Francesco" 
+        },
+        "Gregorio di Cecco" : {
+            "img":"img/catalog/Gregorio.jpg",
+            "date": "Gregorio di Cecco",
+            "bio": "Gregorio di Cecco" 
+        },
+        "Giovanni da Udine" : {
+            "img":"img/catalog/Giovanni.jpg",
+            "date": "Giovanni da Udine",
+            "bio": "Giovanni da Udine" 
+        },
+        "Giovanni di Paolo" : {
+            "img":"img/catalog/GiovanniPaolo.jpg",
+            "date": "Giovanni di Paolo",
+            "bio": "Giovanni di Paolo" 
+        },
+        "Giorgione" : {
+            "img":"img/catalog/Giorgione.jpg",
+            "date": "Giorgione",
+            "bio": "Giorgione" 
+        },
+        "Tarantino, Bernardo" : {
+            "img":"img/catalog/Parentino.jpg",
+            "date": "Tarantino, Bernardo",
+            "bio": "Tarantino, Bernardo" 
+        },
+        "Pezellino" : {
+            "img":"img/catalog/pesello.jpg",
+            "date": "Pezellino",
+            "bio": "Pezellino" 
+        },
+        "Pietro Perugino" : {
+            "img":"img/catalog/Pietro.jpg",
+            "date": "Pietro Perugino",
+            "bio": "Pietro Perugino" 
+        },
+        "Peruzzi, Baldassare" : {
+            "img":"img/catalog/peruzzi.jpg",
+            "date": "Peruzzi, Baldassare",
+            "bio": "Peruzzi, Baldassare" 
+        },
+        "Pisanello" : {
+            "img":"img/catalog/pisanello.jpg",
+            "date": "Pisanello",
+            "bio": "Pisanello" 
+        },
+        "Pinturicchio" : {
+            "img":"img/catalog/Pinturicchio.jpg",
+            "date": "Pinturicchio",
+            "bio": "Pinturicchio" 
+        }
+    },
+    "age-07":{
+        "info":"C 2000",
+        "Benedetto di Bindo" : {
+            "img":"img/catalog/benedetto.jpg",
+            "date": "Benedetto di Bindo",
+            "bio": "Benedetto di Bindo" 
+        },
+        "Bergognone, Ambrogio" : {
+            "img":"img/catalog/bergonione.jpg",
+            "date": "Bergognone, Ambrogio",
+            "bio": "Bergognone, Ambrogio" 
+        },
+        "Bissolo, Francesco" : {
+            "img":"img/catalog/bissolo.jpg",
+            "date": "Bissolo, Francesco",
+            "bio": "Bissolo, Francesco" 
+        },
+        "Boltraffio, Giovanni" : {
+            "img":"img/catalog/Boltraffio.jpg",
+            "date": "Boltraffio, Giovanni",
+            "bio": "Boltraffio, Giovanni" 
+        },
+        "Bonsignori, Francesco" : {
+            "img":"img/catalog/Bonsignori.jpg",
+            "date": "Bonsignori, Francesco",
+            "bio": "Bonsignori, Francesco" 
+        },
+        "Botticini, Rafaello" : {
+            "img":"img/catalog/Botticini.jpg",
+            "date": "Botticini, Rafaello",
+            "bio": "Botticini, Rafaello" 
+        },
+        "Bramantino" : {
+            "img":"img/catalog/Bramantino.jpg",
+            "date": "Bramantino",
+            "bio": "Bramantino" 
+        },
+        "Brea, Ludovico" : {
+            "img":"img/catalog/Brea.jpg",
+            "date": "Brea, Ludovico",
+            "bio": "Brea, Ludovico" 
+        },
+        "Biagio d'Antonio Tucci" : {
+            "img":"img/catalog/Biagio.jpg",
+            "date": "Biagio d'Antonio Tucci",
+            "bio": "Biagio d'Antonio Tucci" 
+        },
+        "Vecchietta" : {
+            "img":"img/catalog/Vecchietta.jpg",
+            "date": "Vecchietta",
+            "bio": "Vecchietta" 
+        },
+        "Andrea Verrocchio" : {
+            "img":"img/catalog/andrea.jpg",
+            "date": "Andrea Verrocchio",
+            "bio": "Andrea Verrocchio" 
+        },
+        "Domenico Ghirlandaio" : {
+            "img":"img/catalog/domeniko.jpg",
+            "date": "2 junio 1448 a 11 enero 1494.",
+            "bio": "Uno de los principales artistas florentinos de Quatrocento, fundador de la dinastía artística que continuaron su hermano David y su hijo Ridolfo. Jefe del taller de arte, donde el joven Miguel ángel dominó las habilidades profesionales durante un año. El autor de los ciclos murales, en los que sobresale, con todo tipo de detalles, muestra la vida doméstica de los personajes bíblicos (en su papel actúan los nobles ciudadanos de Florencia con trajes de la época)." 
+        },
+        "Benozzo Gozzoli" : {
+            "img":"img/catalog/benozzo.jpg",
+            "date": "Benozzo Gozzoli",
+            "bio": "Benozzo Gozzoli" 
+        },
+        "Granacci, Francesco" : {
+            "img":"img/catalog/granacci.jpg",
+            "date": "Granacci, Francesco",
+            "bio": "Granacci, Francesco" 
+        },
+        "Gregorio di Cecco" : {
+            "img":"img/catalog/Gregorio.jpg",
+            "date": "Gregorio di Cecco",
+            "bio": "Gregorio di Cecco" 
+        },
+        "Giovanni da Udine" : {
+            "img":"img/catalog/Giovanni.jpg",
+            "date": "Giovanni da Udine",
+            "bio": "Giovanni da Udine" 
+        },
+        "Giovanni di Paolo" : {
+            "img":"img/catalog/GiovanniPaolo.jpg",
+            "date": "Giovanni di Paolo",
+            "bio": "Giovanni di Paolo" 
+        },
+        "Giorgione" : {
+            "img":"img/catalog/Giorgione.jpg",
+            "date": "Giorgione",
+            "bio": "Giorgione" 
+        },
+        "Tarantino, Bernardo" : {
+            "img":"img/catalog/Parentino.jpg",
+            "date": "Tarantino, Bernardo",
+            "bio": "Tarantino, Bernardo" 
+        },
+        "Pezellino" : {
+            "img":"img/catalog/pesello.jpg",
+            "date": "Pezellino",
+            "bio": "Pezellino" 
+        },
+        "Pietro Perugino" : {
+            "img":"img/catalog/Pietro.jpg",
+            "date": "Pietro Perugino",
+            "bio": "Pietro Perugino" 
+        },
+        "Peruzzi, Baldassare" : {
+            "img":"img/catalog/peruzzi.jpg",
+            "date": "Peruzzi, Baldassare",
+            "bio": "Peruzzi, Baldassare" 
+        },
+        "Pisanello" : {
+            "img":"img/catalog/pisanello.jpg",
+            "date": "Pisanello",
+            "bio": "Pisanello" 
+        },
+        "Pinturicchio" : {
+            "img":"img/catalog/Pinturicchio.jpg",
+            "date": "Pinturicchio",
+            "bio": "Pinturicchio" 
+        }
+    }
+}
