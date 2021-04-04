@@ -10,6 +10,23 @@ fetch("http://localhost:8080/src/catalog.json")
     let catalog = response;
     let languageItemSelected;
 
+    // Определяем кто выделен
+    function changeCard() {
+      let selectMan = document.querySelector('.age-accordion__item-select');
+      let childSelectMan = selectMan.childNodes[0].textContent;
+      let parentSelectMan = selectMan.parentElement.id;
+      languageItemSelected = document.querySelector('.language-list__selected').id;
+      let selectManCatalog = catalog[languageItemSelected][parentSelectMan][childSelectMan];
+
+      let keys = Object.keys(catalog[languageItemSelected][parentSelectMan]);
+      console.log(keys)
+      console.log(keys.indexOf(childSelectMan))
+
+      document.querySelector('.biography-card__img').style.backgroundImage = 'url('+selectManCatalog.img+')';
+      document.querySelector('.biography-card__name').textContent = childSelectMan;
+      document.querySelector('.biography-card__date').textContent = selectManCatalog.date;
+      document.querySelector('.biography-card__text').textContent = selectManCatalog.bio;
+    }
     function addNewList(){
       // Определяем язык
       languageItemSelected = document.querySelector('.language-list__selected');
@@ -34,7 +51,7 @@ fetch("http://localhost:8080/src/catalog.json")
     }
 
     function changeCardOnClick() {
-      // Изменение карточки деятеля при нажатии на кнопку
+      // Изменение карточки деятеля при нажатии на имя
      let accordionItem = document.querySelectorAll('.age-accordion__item');
      accordionItem.forEach(item=>{
        item.addEventListener('click', function(){
@@ -83,9 +100,20 @@ fetch("http://localhost:8080/src/catalog.json")
     });
 
     // Изменение языка
+
     let languageItem = document.querySelectorAll('.language-list__item')
     languageItem.forEach(item=>{
       item.addEventListener('click', function(){
+
+        let selectMan = document.querySelector('.age-accordion__item-select');
+        let childSelectMan = selectMan.childNodes[0].textContent;
+        let parentSelectMan = selectMan.parentElement.id;
+        let languageItemSelectedID = document.querySelector('.language-list__selected').id;
+        // let selectManCatalog = catalog[languageItemSelected][parentSelectMan][childSelectMan];
+
+        let keys = Object.keys(catalog[languageItemSelectedID][parentSelectMan]);
+        let keysNumber = keys.indexOf(childSelectMan)
+
         for (let i = 0; i < languageItem.length; i++) {
           languageItem[i].classList.remove('language-list__selected')
         }
@@ -96,17 +124,42 @@ fetch("http://localhost:8080/src/catalog.json")
         
         // Меняет язык Header аккордиона
         let accordionHeader = document.querySelectorAll('.age-accordion__title');
-        let keys = Object.keys(catalog[languageItemSelected.id]);
+        keys = Object.keys(catalog[languageItemSelected.id]);
 
         for (let i=0; i<accordionHeader.length; i++) {
           accordionHeader[i].textContent = catalog[languageItemSelected.id][keys[i+1]].info
         }
-
         addNewList();
-        changeCardOnClick();
+        keys = Object.keys(catalog[languageItemSelected.id][parentSelectMan]);
+        childSelectMan=keys[keysNumber];
+        let selectManCatalog = catalog[languageItemSelected.id][parentSelectMan][childSelectMan];
 
+        document.querySelector('.biography-card__img').style.backgroundImage = 'url('+selectManCatalog.img+')';
+        document.querySelector('.biography-card__name').textContent = childSelectMan;
+        document.querySelector('.biography-card__date').textContent = selectManCatalog.date;
+        document.querySelector('.biography-card__text').textContent = selectManCatalog.bio;
+
+
+        changeCardOnClick();
       })
     })
+
+
+
     addNewList();
+    // Выбор активного деятеля Доменико Гирландайо (11 в списке)
+    let activeMan = document.querySelectorAll('.age-accordion__item');
+    activeMan[11].classList.add('age-accordion__item-select');
+    // Ставить выбранную карту
+    let selectMan = document.querySelector('.age-accordion__item-select');
+    let childSelectMan = selectMan.childNodes[0].textContent;
+    let parentSelectMan = selectMan.parentElement.id;
+    languageItemSelected = document.querySelector('.language-list__selected').id;
+    let selectManCatalog = catalog[languageItemSelected][parentSelectMan][childSelectMan];
+    document.querySelector('.biography-card__img').style.backgroundImage = 'url('+selectManCatalog.img+')';
+    document.querySelector('.biography-card__name').textContent = childSelectMan;
+    document.querySelector('.biography-card__date').textContent = selectManCatalog.date;
+    document.querySelector('.biography-card__text').textContent = selectManCatalog.bio;
+
     changeCardOnClick();
   })
