@@ -18,6 +18,7 @@ body {
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     padding: 0;
+    transition: all 0.3s ease-in-out;
 }
 
 ul {
@@ -29,6 +30,7 @@ ul {
 a {
     cursor: pointer;
     text-decoration: none;
+    transition: all 0.3s ease-in-out;
 }
 
 h3 {
@@ -52,6 +54,7 @@ h3 {
     border-radius: 30px;
     background-color: transparent;
     font-weight: bold;
+    transition: all 0.3s ease-in-out;
 
     &:hover {
         color:#fff;
@@ -82,6 +85,7 @@ h3 {
     background-color: #666;
     border-radius: 50%;
     top: 130px;
+    transition: all 0.3s ease-in-out;
 
     &::after {
         font-size: 15px;
@@ -101,6 +105,7 @@ h3 {
 }
 
 @mixin p-class {
+    transition: all 0.3s ease-in-out;
     &:hover {
         color: #C283F3;
     }
@@ -166,12 +171,20 @@ h3 {
         font-size: 20px;
         color:#fff;
         background-color: #9D5CD0;
+        border: 3px solid #9D5CD0;
+        transition: all 0.2s linear;
         &:focus {
             &::after {
                 width: 333px;
                 height: 80px;
                 border-radius: 35px;
             }
+        }
+        &:hover {
+            border: 3px solid #D1A9F0;
+        }
+        &:active {
+            background-color: #7943A4;
         }
     }
 }
@@ -226,6 +239,7 @@ h3 {
     &__link {
         @include p-class();
         color: #fff;
+        transition: color 0.3s linear;
     }
 
     &__items {
@@ -243,6 +257,7 @@ h3 {
     @include p-class();
     cursor: pointer;
     font-style: 18px;
+    transition: color 0.3s linear;
     
     &::before {
         content: "\2386";
@@ -259,6 +274,7 @@ h3 {
         color: #fff;
         position: relative;
         font-weight: 100;
+        transition: all 0.3s ease-in-out;
 
         &:not(:last-child) {
             margin-right: 120px;
@@ -276,7 +292,7 @@ h3 {
             }
         }
         &:hover .search-nav__list {
-            display: block;
+            max-height: 300px;
         }
         
     }
@@ -284,7 +300,6 @@ h3 {
         display: flex;
         height: 70px;
         align-items: center;
-        transition: all 0.3s ease-in;
         
         &::after {
             content: ""; //2227
@@ -303,8 +318,9 @@ h3 {
     &__list {
         position: absolute;
         top: 70px;
-        display: none;
-        transition: all 2s linear;
+        max-height: 0;
+        overflow:hidden;
+        transition: max-height 0.4s linear;
     }  
 }
 // Список художников с кастомным скролбаром
@@ -408,6 +424,7 @@ h3 {
         position: relative;
         top: 5px;
         margin-right: 9px;
+        transition: all 0.3s ease-in-out;
 
         &:focus {
             outline: 1px solid #C283F3;
@@ -424,6 +441,7 @@ h3 {
         line-height: 25px;
         font-weight: 100;
         color: #fff;
+        transition: all 0.3s ease-in-out;
 
         &::placeholder {
             font-family: "Open Sans";
@@ -683,6 +701,7 @@ h3 {
         border-top: 1px solid #cacaca;
         border-bottom: 1px solid #cacaca;
         height: 113px;
+        transition: all 0.3s ease-in-out;
 
         &:nth-child(13){
             border-bottom: 1px solid #cacaca;
@@ -694,6 +713,7 @@ h3 {
             .age-accordion__button {
                 background-color: #9D5CD0;
                 border: 2px solid #9D5CD0;
+                transition: all 0.3s ease-in-out;
                 &::after {
                     border-color: #fff;
                 }
@@ -706,6 +726,7 @@ h3 {
             .age-accordion__button {
                 background-color: #7943A4;
                 border: 2px solid #D1A9F0;
+                transition: all 0.3s ease-in-out;
                 &::after {
                     border-color: #fff;
                 }
