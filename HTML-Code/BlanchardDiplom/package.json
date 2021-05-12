@@ -6,7 +6,7 @@
   "dependencies": {
     "jquery": "^3.6.0",
     "simplebar": "^5.3.0",
-    "swiper": "^6.5.0",
+    "swiper": "^6.5.1",
     "webpack-jquery-ui": "^2.0.1",
     "ymaps": "^0.2.1",
     "ymaps-list": "^1.18.2"
