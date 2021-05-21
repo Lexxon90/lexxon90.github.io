@@ -1,4 +1,7 @@
 @import url("../fonts/opensans.css");
+* {
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Open Sans';
@@ -44,6 +47,11 @@ h3 {
     padding-bottom: $bottom;
     padding-left: 150px;
     padding-right: 160px;
+
+    @media (max-width:1024px) {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
 }
 
 @mixin button() {
@@ -79,6 +87,7 @@ h3 {
 }
 
 @mixin swiper-button {
+    position: relative;
     width: 30px;
     height: 30px;
     border: 2px solid #666;
@@ -88,6 +97,9 @@ h3 {
     transition: all 0.3s ease-in-out;
 
     &::after {
+        position: relative;
+        top: 6px;
+        left: 9px;
         font-size: 15px;
         color: #fff;
     }
@@ -138,6 +150,9 @@ h3 {
     justify-content: space-between;
     background-color: #000;
     color: #fff;
+    .form-search {
+        display: none;
+    }
 }
 .header-search {
     @include content-contaner($top:0, $bottom:0);
@@ -149,7 +164,7 @@ h3 {
 }
 .header-banner {
     @include content-contaner(70px, 120px);
-    max-width: 600px;
+    max-width: 900px;
     color: #fff;
 
 
@@ -222,6 +237,10 @@ h3 {
     .slide_3 {
         background-image: url('../img/unsplash3.jpg');
     }
+}
+// Бургер меню
+.main-burger {
+    display: none;
 }
 // Логотип
 .logo {
@@ -471,7 +490,7 @@ h3 {
 .gallery {
     @include content-contaner($bottom: 75px);
     position: relative;
-    height: 835px;
+    height: 100%;
     background-image: url(../img/gallery.jpg);
     color:#fff;
     overflow: hidden;
@@ -480,16 +499,16 @@ h3 {
     }
     &__contaner{
         display: flex;
-        height: 740px;
+        height: 840px;
     }
     &__filter {
         display: flex;
+        padding-right: 40px;
         flex-direction: column;
-        justify-content: space-between;
-        min-width: 450px;
     }
     &__info {
         width: 400px;
+        margin-top: auto;
         font-weight: 600;
         line-height: 32px;
         a {
@@ -556,31 +575,42 @@ h3 {
 }
 .swiper-container-gallery {
     overflow: hidden;
-
-    .swiper-wrapper {
-        overflow: hidden;
+    width: 1150px;
+    height: 826px;
+    .swiper-gallery-nav {
+        position: relative;
+        display: flex;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
-    
-    .swiper-slide {
+    img {
         height: 350px;
         width: 350px;
-      }
+    }
+    .swiper-slide {
+        overflow: hidden;
+        height: 350px;
+    }
+    
 
     .swiper-button-prev {
-        @include swiper-button;
-        left: 605px;
+        @include swiper-button();
+        position: relative;
+        top: 0;
+        display: block;
     }
 
     .swiper-button-next {
-        @include swiper-button;
-        left: 705px;
+        @include swiper-button();
+        position: relative;
+        top: 0;
+        display: block;
     }
 
     .swiper-pagination {
+        position: relative;
+        display: block;
         width: 100px;
-        height: auto;
-        top: 118px;
-        left: 620px;
     }
 }
 // Каталог
@@ -921,6 +951,7 @@ h3 {
     &__label-check {
         cursor: pointer;
         position: relative;
+        display: block;
         padding-left: 24px;
         transition: color .3s ease-in-out ;
 
@@ -1020,25 +1051,30 @@ h3 {
     padding-bottom: 10px;
     padding-left: 10px;
     overflow: hidden;
-    .swiper-pagination {
-        position: absolute;
-        height: 20px;
-        width: 35px;
-        top: 41px;
-        left: 55px;
-        text-align: unset;
+    .swiper-gallery-nav {
+        position: relative;
+        top: -35px;
+        display: flex;
+    }    
+
+    .swiper-button-prev {
+        @include swiper-button();
+        position: relative;
+        top: 0;
+        display: block;
     }
 
     .swiper-button-next {
-        position: absolute;
-        @include swiper-button;
-        top: 54px;
-        left: 110px;
+        @include swiper-button();
+        position: relative;
+        top: 0;
+        display: block;
     }
-    .swiper-button-prev {
-        position: absolute;
-        @include swiper-button;
-        top: 54px;
+
+    .swiper-pagination {
+        position: relative;
+        display: block;
+        width: 100px;
     }
 }
 
@@ -1160,12 +1196,20 @@ h3 {
         position: absolute;
         top: -70px;
         left: 0px;
+        &::after {
+            top: 0;
+            left: 0;
+        }
     }
     .swiper-button-next {
         @include swiper-button;
         position: absolute;
         top: -70px;
         right: 7px;
+        &::after {
+            top: 0;
+            left: 0;
+        }
     }
 }
 
@@ -1316,3 +1360,271 @@ footer {
             
 
 }
+
+
+@media (max-width: 1024px) {
+
+    .contaner {
+        width: 1024px;
+    }
+    .header-main {
+        justify-content: space-between;
+
+        .form-search {
+            display:block;
+            svg {
+                width: 28px;
+                height: 28px;
+            }
+            input {
+                display: none;
+            }
+        }
+    }
+    .main-nav {
+        display: none;
+    }
+    .login {
+        display: none;
+    }
+    .search-nav {
+        display: none;
+    }
+    .main-burger {
+        display: block;
+    }
+    .header {
+        &__background-img {
+            width: 1024px;
+            overflow: hidden;
+              
+            .slide_1 {
+                background-image: url('../img/unsplash1-tablet.jpg');
+            }
+            .slide_2 {
+                background-image: url('../img/unsplash2-tablet.jpg');
+            }
+            .slide_3 {
+                background-image: url('../img/unsplash3-tablet.jpg');
+            }
+        }  
+    }
+    .header-search {
+        display:none;
+    }
+    .header-banner {
+        padding-top: 105px;
+    }
+// Галерея
+    .gallery{
+        &__filter {
+            min-width: 350px;
+        }
+        &__contaner {
+            height: 670px;
+        }
+        &__info {
+            width: 290px;
+        }
+    }
+    .select {
+        width: 280px;
+    }
+
+    .swiper-container-gallery {
+        width: 594px !important;
+        height: 674px;
+        .swiper-slide{
+            height: 280px;
+        }
+        img {
+            width: 280px;
+            height: 280px;
+        }
+        .swiper-gallery-nav {
+            padding-top: 40px;
+            padding-bottom: 10px;
+        }
+    }
+// Биография
+    .biography-card {
+        width: 437px;
+
+        &__img {
+            width: 437px;
+        }
+    }
+    .age-accordion__list {
+        height: 430px;
+    }
+// События
+    .event-card {
+        width: 290px;
+        &:not(:nth-child(3n+1)){
+            margin-left: 27px;
+        }
+        &:nth-child(n+4){
+            margin-top: 27px;
+        }
+        &__img {
+            width: 290px;
+        }
+        &__name {
+            margin-left: 34px;
+            margin-right: 34px;
+        }
+        &__text {
+            margin-left: 34px;
+            margin-right: 34px;
+        }
+    }
+// Издания
+
+    .books {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .books-list{
+        margin-left: 0;
+    }
+    .books-item {
+        
+        &__img {
+            width: 290px;
+            height: 320px;
+        }
+    }
+// Проекты
+    .projects-text {
+        width: 100%;
+    }
+    .projects-sponsors {
+        .swiper-container-sponsors {
+            margin-left: 60px;
+        }
+    }
+// Контакты
+    .contacts {
+        .title {
+            padding-left: 50px;
+        }
+    }
+    .contacts-fidback {
+        padding-right: 100px;
+        padding-left: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contaner {
+        width: 768px;
+    }
+    .header {
+        &__background-img {
+            width: 768px;
+              
+            .slide_1 {
+                background-image: url('../img/unsplash1-760.jpg');
+            }
+            .slide_2 {
+                background-image: url('../img/unsplash2-760.jpg');
+            }
+            .slide_3 {
+                background-image: url('../img/unsplash3-760.jpg');
+            }
+        }  
+    }
+    .about-us {
+        &__subtitle {
+            width: 100%;
+        }
+    }
+    .gallery {
+       padding-bottom: 164px;
+       &__contaner {
+           display: block;
+           height: 100%;
+       }
+       &__info {
+           position: absolute;
+           bottom: 80px;
+           width: 95%;
+       }
+    }
+    .swiper-container-gallery {
+    width: 668px !important;
+    height: 674px;
+        .swiper-slide{
+            height: 280px;
+        }
+        img {
+            width: 317px;
+            height: 280px;
+        }
+    }
+    .catalog {
+        &__text {
+            width: 100%;
+        }
+        &__body {
+           flex-direction: column-reverse; 
+        }
+    }
+    .age-accordion {
+        width: 668px;
+        &__list {
+            height: 360px;
+        }
+    }
+    .biography-card {
+        width: 100%;
+        &__img {
+            width: 668px;
+            height: 419px;
+        }
+    }
+    .event-card {
+        width: 317px;
+        &__img {
+            width: 317px;
+        }
+        &:nth-child(2n+1) {
+            margin-left: 0;
+        }
+        &:nth-child(2n){
+            margin-left: 27px;
+        }
+        &:nth-child(n+3){
+            margin-top: 27px;
+        }
+    }
+
+    .books {
+        display: block;
+        
+    }
+    .books-checkbox {
+        
+        &__label-list {
+            column-count: 3;
+        }
+        &__label-check {
+            font-size: 12px;
+        }
+    }
+    .books-item {
+        &__cost {
+            right: 25px;
+        }
+    }
+    .swiper-container-sponsors {
+        margin-left: 40px !important; 
+        img {
+            width: 264px;
+            height: 106px;
+        }
+    }
+
+}
+
+

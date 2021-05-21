@@ -149,9 +149,6 @@ fetch("http://localhost:8080/src/catalog.json")
         keys = Object.keys(catalog[languageItemSelected.id][acoordionUL]);
         let keysSearch = keys.indexOf(nameCardMan)-1;
         let accordionList = document.querySelectorAll('.age-accordion__item');
-        console.log(acoordionUL)
-        console.log(accordionHeaderID)
-
         if (acoordionUL == accordionHeaderID) {
           accordionList[keysSearch].classList.add('age-accordion__item-select');
         }

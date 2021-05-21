@@ -22,10 +22,20 @@ const swiper = new Swiper('.swiper-container-background', {
 });
 
 const swiperGallery = new Swiper('.swiper-container-gallery', {
-  slidesPerView: 3,
-  slidesPerColumn: 2,
-  spaceBetween: 40,
-
+  breakpoints: {
+    // when window width is >= 768
+    768: {
+      slidesPerView: 2,
+      slidesPerColumn: 2,
+      spaceBetween: 34
+    },
+    // when window width is >= 1440
+    1440: {
+      slidesPerView: 3,
+      slidesPerColumn: 2,
+      spaceBetween: 50
+    },
+  },
   pagination: {
     el: '.swiper-pagination',
     type: 'fraction',
@@ -40,9 +50,17 @@ const swiperGallery = new Swiper('.swiper-container-gallery', {
 });
 
 const swiperBooks = new Swiper ('.swiper-container-books', {
-  slidesPerView: 3,
   spaceBetween: 50,
-
+  breakpoints: {
+    // when window width is >= 320px
+    768: {
+      slidesPerView: 2,
+    },
+    // when window width is >= 480px
+    1440: {
+      slidesPerView: 3,
+    },
+  },
   pagination: {
     el: '.swiper-pagination',
     type: 'fraction',
@@ -57,8 +75,18 @@ const swiperBooks = new Swiper ('.swiper-container-books', {
 });
 
 const swiperSponsors = new Swiper ('.swiper-container-sponsors', {
-  slidesPerView: 3,
   spaceBetween: 50,
+
+  breakpoints: {
+    // when window width is >= 320px
+    768: {
+      slidesPerView: 2,
+    },
+    // when window width is >= 480px
+    1440: {
+      slidesPerView: 3,
+    },
+  },
 
   pagination: {
     el: '.swiper-pagination',
@@ -117,8 +145,25 @@ $( function() {
 } );
 
 // События
+
 let buttonCard = document.querySelector('.events__button');
 let card = document.querySelectorAll(".event-card");
+
+function resize() {
+  if (document.documentElement.clientWidth <=768) {
+    card[2].classList.add('events__hidden')
+  }
+}
+
+resize();
+window.onresize = function(){
+  if (document.documentElement.clientWidth <=768) {
+    card[2].classList.add('events__hidden')
+  }
+  else {
+    card[2].classList.remove('events__hidden')
+  }
+};
 
 buttonCard.addEventListener('click', function(){
   if (buttonCard.textContent=="Все события") {

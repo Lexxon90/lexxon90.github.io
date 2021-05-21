@@ -47,13 +47,6 @@ module.exports = {
             filename: 'index.html',
             template: './src/index.html'
         }),
-        
-        // new webpack.ProvidePlugin({
-        //     $: "jquery",
-        //     jQuery: "jquery",
-        //     "window.jQuery": "jquery'",
-        //     "window.$": "jquery"
-        // }),
 
         new CopyWebpackPlugin({patterns: [{from: 'src/img', to: 'img'},]})
        ],
