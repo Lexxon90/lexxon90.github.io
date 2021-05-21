@@ -9,7 +9,11 @@
 
 ## `Верстка/ Landing page - Отели`
 
-[Ссылка](https://lexxon90.github.io/Верстка/LandingPageHotel/index.html), [Репозиторий](https://github.com/Lexxon90/lexxon90.github.io/tree/master/Верстка/LandingPageHotel)
+[Ссылка](https://lexxon90.github.io/HTML-Code/LandingPageHotel/index.html), [Репозиторий](https://github.com/Lexxon90/lexxon90.github.io/tree/master/HTML-Code/LandingPageHotel)
+
+## `Верстка/ Landing page - Архитектура`
+
+[Ссылка](https://lexxon90.github.io/HTML-Code/LandingPageArchitecture/index.html), [Репозиторий](https://github.com/Lexxon90/lexxon90.github.io/tree/master/HTML-Code/LandingPageArchitecture)
 
 ## `Виджет комментариев на React/Redux`
 
