@@ -4,6 +4,7 @@
 }
 
 body {
+    margin: 0;
     font-family: 'Open Sans';
     font-size: 16px;
     line-height: 1;
@@ -41,12 +42,14 @@ h3 {
     line-height: 65px;
     font-weight: 400;
 }
+$p-left: 150px;
+$p-right: 160px;
 
 @mixin content-contaner($top: 85px, $bottom: 80px) {
     padding-top: $top;
     padding-bottom: $bottom;
-    padding-left: 150px;
-    padding-right: 160px;
+    padding-left: $p-left;
+    padding-right: $p-right;
 
     @media (max-width:1024px) {
         padding-left: 50px;
@@ -1624,7 +1627,190 @@ footer {
             height: 106px;
         }
     }
+}
 
+@media (max-width: 320px) {
+    .contaner {
+        width: 320px;
+    }
+    .title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .header-main {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        .form-search {
+            svg {
+                width: 16px;
+            }
+        }
+    }
+    .main-burger {
+        svg {
+            width: 20px;
+        }
+    }
+    
+    .logo {
+        &__title {
+            font-size: 19px;
+        }
+        &__subtitle {
+            font-size: 8px;
+        }
+    }
+    .header {
+        &__background-img {
+            width: 320px;
+              
+            .slide_1 {
+                background-image: url('../img/unsplash1-320.jpg');
+            }
+            .slide_2 {
+                background-image: url('../img/unsplash2-320.jpg');
+            }
+            .slide_3 {
+                background-image: url('../img/unsplash3-320.jpg');
+            }
+        }  
+    }
+    .header-banner {
+        text-align: center;
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 45px;
+        &__title {
+            font-size: 32px;
+            line-height: 38px;
+        }
+        &__subtitle {
+            margin-top: 16px;
+            font-size: 12px;
+            font-weight: 100;
+            line-height: 16px;
+        }
+        &__button {
+            margin-top: 20px;
+            padding-top: 11px;
+            padding-bottom: 14px;
+            padding-left: 19px;
+            padding-right: 16px;
+            font-size: 12px;
+        }
+    }
+
+    .about-us {
+        padding-top: 50px;
+        padding-left: 14px;
+        padding-right: 14px;
+        padding-bottom: 50px;
+        &__subtitle {
+            font-size: 14px;
+            line-height: 28px;
+        }
+    }
+
+    .gallery {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 12px;
+        padding-right: 12px;
+        &__info {
+            width: 280px;
+            font-size: 16px;
+            line-height: 32px;
+            bottom: 80px;
+        }
+        .select {
+            margin-top: 0;
+        }
+        
+    }
+
+    .swiper-container-gallery {
+        width: 290px !important;
+        height: 633px;
+        margin-top: 40px;
+        .swiper-gallery-nav {
+            position: absolute;
+            bottom: 240px;
+            left: 60px;
+        }
+        .swiper-slide {
+            height: 367px;
+        }
+        img {
+            width: 290px;
+            height: 367px;
+        }
+    }
+
+    .catalog {
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        &__header {
+            display: block;
+        }
+        &__text {
+            display: none;
+        }
+    }
+    .language-list {
+        position: static;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        &__item {
+            margin-left: 0;
+            &:not(:first-child) {
+                margin-left: 34px;
+            }
+            &::after {
+                width: 40px;
+                height: 40px;
+                top: -6px;
+                left: -6px;
+            }
+        }
+        &__img {
+            width: 32px;
+        } 
+    }
+    .age-accordion {
+        width: 290px;
+        &__title {
+            font-size: 18px;
+            line-height: 32px;
+        }
+        &__list {
+            height: 810px;
+        }
+    }
+    .biography-card {
+        &__img {
+            width: 290px;
+            height: 181px;
+        }
+    }
+
+    .events {
+        display: none;
+    }
+    .books {
+        display: none;
+    }
+    .projects {
+        display: none;
+    }
+    .contacts {
+        display: none;
+    }
 }
 
 

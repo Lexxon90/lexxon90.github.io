@@ -23,6 +23,10 @@ const swiper = new Swiper('.swiper-container-background', {
 
 const swiperGallery = new Swiper('.swiper-container-gallery', {
   breakpoints: {
+    320: {
+      slidesPerView: 1,
+      slidesPerColumn: 1,
+    },
     // when window width is >= 768
     768: {
       slidesPerView: 2,
