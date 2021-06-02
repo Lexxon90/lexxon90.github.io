@@ -843,9 +843,11 @@ $p-right: 160px;
     @include content-contaner($top: 75px, $bottom: 70px);
     background-color: #fff;
     &__contaner {
-        display:flex;
         flex-wrap: wrap;
         margin-top: 20px;
+    }
+    &__wrapper {
+        display: flex;
     }
     &__button {
         @include button;
@@ -1798,18 +1800,222 @@ footer {
             height: 181px;
         }
     }
-
     .events {
-        display: none;
+        overflow: hidden;
+        padding-top: 0;
+        padding-right: 12px;
+        padding-left: 12px;
+        &__button {
+            display: none;
+        }
+        &__wrapper {
+            display: flex;
+            margin-left: 1px;
+        }
+        &__contaner {
+            position: relative;
+
+            width: 300px;
+            height: 730px;
+        }
     }
+    .event-card {
+        width: 300px !important;
+        margin-left: 0 !important;
+        margin-top: 0 !important;
+        &__img {
+            width: 300px;
+        }
+    }
+
     .books {
-        display: none;
+        padding-left: 12px;
+        padding-right: 12px;
+        &__filter {
+            width: 300px;
+        }
+        .swiper-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .swiper-gallery-nav {
+            display: none;
+        }
     }
+    .books-list {
+        padding-top: 50px;
+    }
+    .books-checkbox {
+        &__header{
+            position: relative;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            width: 300px;
+            border-top: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            &::after {
+                content: "";
+                position: absolute;
+                right: 10px;
+                top: 14px;
+                display: block;
+                width: 10px;
+                height: 10px;
+                transform: rotate(45deg);
+                border-bottom: 1px solid #fff;
+                border-right: 1px solid #fff;
+            }
+        }
+        &__label-list {
+            column-count: 1;
+            padding-top: 7px;
+        }
+        &__label-check {
+            border-bottom: 1px solid #fff;
+            padding-bottom: 15px;
+
+        }
+        &__item + span::after {
+            content: '\00D7';
+            position: absolute;
+            bottom: -7px; right: -280px;
+            font-size: 30px;
+            opacity: 0;
+            color: #C283F3;
+            transition: opacity .3s ease-in-out ;
+        }
+
+        &__item:checked + span::after{
+            opacity: 1;
+        }
+        .hidden-item {
+            display: none;
+        }
+    }
+
+    .books-item {
+        display: inline-block;
+        font-size: 12px;
+        width: 130px;
+        height: 254px;
+        &__img {
+            width: 130px;
+            height: 143px;
+        }
+        &__name {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            margin-top: 9px;
+            
+        }
+        &__autor {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        &__cost {
+            position: static;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        &__button {
+            margin-top: 8px;
+        }
+        &:nth-child(2n) {
+            margin-left: 20px;
+        }
+        &:nth-child(n+3) {
+            margin-top: 20px;
+        }
+    }
+
     .projects {
-        display: none;
+        padding-top: 50px;
+        padding-left: 12px;
+        padding-right: 12px;
+        .tooltip-1 {
+            &::after {
+                left: 104px; 
+            }
+        }
+        .tooltip-2 {
+            &::after {
+                left: 104px;
+            }
+        }
+        .tooltip-3 {
+            right: 0;
+            &::after {
+                left: 225px; 
+            }
+        }
     }
+    .swiper-container-sponsors {
+        width: 195px;
+        height: 65px;
+        img {
+            width: 195px;
+            height: 65px;
+        }
+        
+    }
+
+    .projects-sponsors {
+        &__button {
+            .swiper-button-prev {
+                top: -25px;
+            }
+            .swiper-button-next {
+                top: 0;
+            }
+        }
+    }
+
     .contacts {
-        display: none;
+        
+        &__contaners {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        .map {
+            position: absolute;
+            top: 110px;
+            max-width: 320px;
+            height: 320px;
+        }
+        .contacts-fidback {
+            width: 320px;
+            border-right: none;
+            padding-top: 20px;
+            padding-left: 12px;
+            padding-right: 12px;
+            padding-bottom: 30px;
+            &__title {
+                font-size: 20px;
+            }
+            &__adress {
+                font-size: 14px;
+                margin-bottom: 360px;
+            }
+        }
+        .contact-form {
+            &__title {
+                font-size: 18px;
+            }
+            input {
+                width: 290px;
+            }
+        }
+    }
+    footer {
+        flex-direction: column-reverse;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 }
 

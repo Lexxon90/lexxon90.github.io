@@ -52,36 +52,41 @@ const swiperGallery = new Swiper('.swiper-container-gallery', {
   },
   
 });
-
-const swiperBooks = new Swiper ('.swiper-container-books', {
-  spaceBetween: 50,
-  breakpoints: {
-    // when window width is >= 320px
-    768: {
-      slidesPerView: 2,
+if (document.documentElement.clientWidth > 320) {
+  const swiperBooks = new Swiper ('.swiper-container-books', {
+    spaceBetween: 50,
+    breakpoints: {
+      // when window width is >= 320px
+      768: {
+        slidesPerView: 2,
+      },
+      // when window width is >= 480px
+      1440: {
+        slidesPerView: 3,
+      },
     },
-    // when window width is >= 480px
-    1440: {
-      slidesPerView: 3,
-    },
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'fraction',
-
-  },
-
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'fraction',
   
-});
+    },
+  
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    
+  });
+}
+
 
 const swiperSponsors = new Swiper ('.swiper-container-sponsors', {
   spaceBetween: 50,
 
   breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
     // when window width is >= 320px
     768: {
       slidesPerView: 2,
@@ -143,6 +148,47 @@ let select = function () {
 
 select();
 
+  if (document.documentElement.clientWidth <=320) {
+    let headerCheckbox = document.querySelector('.books-checkbox__header');
+    let listCheckbox = document.querySelectorAll('.books-checkbox__label-check');
+    let itemCheckbox = document.querySelectorAll('.books-checkbox__item');
+    listCheckbox.forEach(item=>{
+      item.classList.add('hidden-item');
+    })
+    itemCheckbox.forEach(item => {
+      item.addEventListener('click',function(){
+        item.classList.toggle('checked')
+        for (let i=0; i<=11; i++) {
+          if (!(itemCheckbox[i].classList.contains('checked'))) {
+            listCheckbox[i].classList.add('hidden-item')
+          }
+        }
+        headerCheckbox.classList.remove('active')
+
+
+      })
+    })
+    
+    headerCheckbox.addEventListener('click', function() {
+      headerCheckbox.classList.toggle('active');
+
+      if(headerCheckbox.classList.contains('active')) {
+        listCheckbox.forEach(item=>{
+          item.classList.remove('hidden-item')
+        })
+      }
+      else {
+        for (let i=0; i<=11; i++) {
+          if (!(itemCheckbox[i].classList.contains('checked'))) {
+            listCheckbox[i].classList.add('hidden-item')
+          }
+        }
+      }
+    })
+
+  }
+
+
 // Accordion
 $( function() {
     $( "#accordion" ).accordion();
@@ -167,6 +213,8 @@ window.onresize = function(){
   else {
     card[2].classList.remove('events__hidden')
   }
+
+  mobileEvent();
 };
 
 buttonCard.addEventListener('click', function(){
@@ -183,6 +231,32 @@ buttonCard.addEventListener('click', function(){
         buttonCard.textContent = "Все события";
     }
 })
+
+function mobileEvent() {
+  if (document.documentElement.clientWidth <=320) {
+    card.forEach(elem => {
+      elem.classList.remove('events__hidden')
+      elem.classList.add ('swiper-slide')
+    })
+    const swiperEvent = new Swiper('.events__contaner', {
+      
+      slideClass: 'event-card',
+      wrapperClass: 'events__wrapper',
+      slidesPerView: 1,
+      slidesPerColumn: 1,
+      spaceBetween: 20,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      
+    });
+  }
+}
+
+mobileEvent();
+
+
 
 // Чекбокс 
 let checkbox = document.querySelectorAll(".books-checkbox__item");
