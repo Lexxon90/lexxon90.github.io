@@ -1,114 +1,11 @@
 import 'swiper/swiper-bundle.css';
 import './scss/style.scss';
 import './catalog.js';
+import './swiper.js';
 import $ from 'jquery';
 require('webpack-jquery-ui/accordion');
 import ymaps from 'ymaps';
-
-import SimpleBar from 'simplebar'; 
 import 'simplebar/dist/simplebar.css';
-
-import Swiper from 'swiper/bundle';
-// import Swiper styles
-
-
-// new SimpleBar(document.querySelector(".search-nav__item"));
-
-const swiper = new Swiper('.swiper-container-background', {
-  effect: 'fade',
-  autoplay: {
-    delay: 5000,
-  },
-});
-
-const swiperGallery = new Swiper('.swiper-container-gallery', {
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-      slidesPerColumn: 1,
-    },
-    // when window width is >= 768
-    768: {
-      slidesPerView: 2,
-      slidesPerColumn: 2,
-      spaceBetween: 34
-    },
-    // when window width is >= 1440
-    1440: {
-      slidesPerView: 3,
-      slidesPerColumn: 2,
-      spaceBetween: 50
-    },
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'fraction',
-    clickable: true,
-  },
-
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  
-});
-if (document.documentElement.clientWidth > 320) {
-  const swiperBooks = new Swiper ('.swiper-container-books', {
-    spaceBetween: 50,
-    breakpoints: {
-      // when window width is >= 320px
-      768: {
-        slidesPerView: 2,
-      },
-      // when window width is >= 480px
-      1440: {
-        slidesPerView: 3,
-      },
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'fraction',
-  
-    },
-  
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    
-  });
-}
-
-
-const swiperSponsors = new Swiper ('.swiper-container-sponsors', {
-  spaceBetween: 50,
-
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-    },
-    // when window width is >= 320px
-    768: {
-      slidesPerView: 2,
-    },
-    // when window width is >= 480px
-    1440: {
-      slidesPerView: 3,
-    },
-  },
-
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'fraction',
-
-  },
-
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  
-});
 
 // Кастомный SELECT 
 
@@ -214,7 +111,6 @@ window.onresize = function(){
     card[2].classList.remove('events__hidden')
   }
 
-  mobileEvent();
 };
 
 buttonCard.addEventListener('click', function(){
@@ -232,29 +128,7 @@ buttonCard.addEventListener('click', function(){
     }
 })
 
-function mobileEvent() {
-  if (document.documentElement.clientWidth <=320) {
-    card.forEach(elem => {
-      elem.classList.remove('events__hidden')
-      elem.classList.add ('swiper-slide')
-    })
-    const swiperEvent = new Swiper('.events__contaner', {
-      
-      slideClass: 'event-card',
-      wrapperClass: 'events__wrapper',
-      slidesPerView: 1,
-      slidesPerColumn: 1,
-      spaceBetween: 20,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      
-    });
-  }
-}
 
-mobileEvent();
 
 
 
