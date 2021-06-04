@@ -95,42 +95,12 @@ $( function() {
 
 let buttonCard = document.querySelector('.events__button');
 let card = document.querySelectorAll(".event-card");
-
-function resize() {
-  if (document.documentElement.clientWidth <=768) {
-    card[2].classList.add('events__hidden')
-  }
-}
-
-resize();
-window.onresize = function(){
-  if (document.documentElement.clientWidth <=768) {
-    card[2].classList.add('events__hidden')
-  }
-  else {
-    card[2].classList.remove('events__hidden')
-  }
-
-};
-
 buttonCard.addEventListener('click', function(){
-  if (buttonCard.textContent=="Все события") {
-      card.forEach(function(element){
-        element.classList.remove('events__hidden');
-      })
-      buttonCard.textContent = "Скрыть события"
-  }
-    else {
-        for (let i=3; i<card.length; i++ ) {
-          card[i].classList.add('events__hidden');
-        }
-        buttonCard.textContent = "Все события";
-    }
+  card.forEach(el => {
+    el.style.display = "block"
+  })
+  buttonCard.style.display = "none"
 })
-
-
-
-
 
 // Чекбокс 
 let checkbox = document.querySelectorAll(".books-checkbox__item");

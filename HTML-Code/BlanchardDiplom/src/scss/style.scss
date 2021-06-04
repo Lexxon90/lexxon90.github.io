@@ -594,7 +594,9 @@ $p-right: 160px;
         overflow: hidden;
         height: 350px;
     }
-    
+    .swiper-wrapper {
+        flex-direction: column;
+    }
 
     .swiper-button-prev {
         @include swiper-button();
@@ -848,6 +850,7 @@ $p-right: 160px;
     }
     &__wrapper {
         display: flex;
+        flex-wrap: wrap;
     }
     &__button {
         @include button;
@@ -867,6 +870,9 @@ $p-right: 160px;
     &__hidden {
         display: none;
     }
+    .swiper-pagination {
+        display: none;
+    }
 }
 .event-card {
     position: relative;
@@ -877,6 +883,7 @@ $p-right: 160px;
         margin-left: 50px;
     }
     &:nth-child(n+4){
+        display: none;
         margin-top: 50px;
     }
     &__date {
@@ -1440,6 +1447,7 @@ footer {
         width: 594px !important;
         height: 674px;
         .swiper-slide{
+            width: 280px !important;
             height: 280px;
         }
         img {
@@ -1560,6 +1568,7 @@ footer {
     width: 668px !important;
     height: 674px;
         .swiper-slide{
+            width: 317px !important;
             height: 280px;
         }
         img {
@@ -1600,6 +1609,7 @@ footer {
             margin-left: 27px;
         }
         &:nth-child(n+3){
+            display: none;
             margin-top: 27px;
         }
     }
@@ -1744,11 +1754,15 @@ footer {
             left: 60px;
         }
         .swiper-slide {
+            width: 290px !important;
             height: 367px;
         }
         img {
             width: 290px;
             height: 367px;
+        }
+        .swiper-wrapper {
+            flex-direction: row;
         }
     }
 
@@ -1810,6 +1824,7 @@ footer {
         }
         &__wrapper {
             display: flex;
+            flex-wrap: nowrap;
             margin-left: 1px;
         }
         &__contaner {
@@ -1818,8 +1833,12 @@ footer {
             width: 300px;
             height: 730px;
         }
+        .swiper-pagination {
+            display: block;
+        }        
     }
     .event-card {
+        display: block !important;
         width: 300px !important;
         margin-left: 0 !important;
         margin-top: 0 !important;
