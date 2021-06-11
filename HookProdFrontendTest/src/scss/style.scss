@@ -1,0 +1,262 @@
+@import url('../fonts/Mukta/stylesheet.css');
+@import url('../fonts/NotoSans/stylesheet.css');
+@import url('../fonts/OpenSans/stylesheet.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans";
+}
+ul {
+    list-style-type: none;
+}
+.contaner {
+    background-color: #F5F4F2;
+    max-width: 380px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+.product-card {
+    width: 312px;
+    background-color: #fff;
+    margin: 0 auto ;
+    border-radius: 10px;
+    padding: 12px 20px 16px;
+    
+}
+.product-header {
+    display: flex;
+
+    &__list {
+        position: relative;
+        left: 14px;
+        display: flex;
+        margin: 0 auto;
+    }
+    &__item {
+        background-color: #c4c4c4;
+        border-radius: 12px;
+        width: 24px;
+        height: 24px;
+        margin-right: 6px;
+        img {
+            position: relative;
+            left: 5px;
+            top: 2px;
+        }
+    }
+}
+
+.slider {
+    margin-top: 14px;
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.product-main {    
+    &__title {
+        margin-top: 36px;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 500;
+    }
+
+    &__subtitle {
+        margin-top: 13px;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 500;
+        color: #999;
+    }
+    &__cost-contaner {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 7px;
+    }
+    &__cost {
+        font-family: "Mukta";
+        font-size: 30px;
+        font-weight: bold;  
+    }
+    &__button {
+        display: flex;
+        align-items: center;
+    }
+    &__link-add {
+        color: #FFB000;
+        margin-right: 6px;
+        font-family: "Mukta";
+        font-weight: bold;
+        font-size: 25px;
+    }
+    &__button-plus {
+        width: 38px;
+        height: 38px;
+        border-radius: 19px;
+        border: none;
+        background-color: #FFB000;
+        color: #fff;
+        font-size: 37px;
+        font-family: "sans-serif";
+    }
+}
+
+.product-footer {
+    
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 16px;
+        margin-top: 14px;
+        border-top: 1px solid #EBEBEB;
+    }
+    &__item {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 20px;
+        color: #FFB000;
+    }
+}
+
+.description {
+    width: 312px;
+    padding: 14px 15px 19px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 23px;
+    &__text {
+        color: #333;
+        font-family: "Noto Sans";
+        font-size: 16px;
+    }
+    &__nutrition-text {
+        margin-top: 17px;
+        font-size: 12px;
+        font-family: 'Open Sans';
+        font-style: normal;
+        color: #333;
+        line-height: 16px;
+        font-weight: 300;
+    }
+    &__nutrition-list {
+        color: #999;
+        font-size: 12px;
+        font-family: 'Open Sans';
+        list-style-type: circle;
+        margin-top: 17px;
+        margin-left: 15px;
+        padding-bottom: 26px;
+    }
+
+    &__list-contaner {
+        margin: 0 auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 17px;
+        border-top: 1px solid #E7E5E5;
+    }
+
+    &__structure {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__structure-number {
+        text-align: center;
+        font-family: "Noto Sans";
+        font-size: 18px;
+        color: #333;
+    }
+    &__structure-name {
+        text-align: center;
+        color: #999;
+        font-family: 'Open Sans';
+        font-size: 12px;
+    }
+    &__structure-rl-contaner {
+        display: flex;
+    }
+    &__structure-rl {
+        padding: 2px 4px;
+        color: #707070;
+        font-size: 10px;
+        font-family: 'Open Sans';
+        background-color: #EBEBEB;
+    }
+    &__structure-low {
+        padding: 2px 6px;
+        color: #0eb44d;
+        font-family: 'Open Sans';
+        font-size: 10px;
+        background-color: #e7f7ed;
+    }
+    &__structure-link {
+        position: relative;
+        display: block;
+        margin-top: 17px;
+        margin-bottom: 17px;
+        color:#FFB000;
+        font-family: "Noto Sans";
+        font-weight: bold;
+        font-size: 14px;
+        text-align: center;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 144px;
+            top: 8px;
+            display: block;
+            width: 5px;
+            height: 5px;
+            border-top: 2px solid #FFB000;
+            border-left: 2px solid #FFB000;
+            transform: rotate(45deg);
+        }
+    }
+    &__ingridients-contaner {
+        padding-top: 17px;
+        border-top: 1px solid #E7E5E5;
+    }
+    &__ingridients-text {
+        margin-top: 17px;
+        padding-bottom: 17px;
+        font-family: 'Open Sans';
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 300;
+        border-bottom: 1px solid #E7E5E5;
+    }
+
+    &__other {
+        padding-top: 17px;
+        .description__title {
+            padding-bottom: 17px;
+        }
+    }
+    &__other-contaner {
+        display: flex;
+        &:not(:last-child) {margin-bottom: 13px;}
+    }
+    &__other-category {
+        width: 60%;
+        color: #878786;
+        font-family: 'Open Sans';
+        font-size: 12px;
+        line-height: 16px;
+    }
+    &__other-value {
+        width: 40%;
+        color: #333;
+        font-family: 'Open Sans';
+        font-size: 12px;
+        line-height: 16px;
+        text-align: right;
+    }
+
+}
