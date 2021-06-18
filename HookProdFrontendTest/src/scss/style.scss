@@ -11,13 +11,64 @@
 ul {
     list-style-type: none;
 }
+
 .contaner {
     background-color: #F5F4F2;
     max-width: 380px;
     margin: 0 auto;
     padding-top: 50px;
     padding-bottom: 60px;
+
 }
+main {
+    position: relative;
+
+}
+
+@keyframes height_0 {
+    0% {height: 123px;}
+    100% {height: 50px;}
+}
+
+@keyframes height_1 {
+    0% {height: 50px;}
+    100% {height: 123px;}
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    background-color: #FFB000;
+    width: 380px;
+    top: 0;
+    height: 123px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    animation: height_1  0.3s ease-in-out;
+
+    
+
+    img {
+        position: absolute;
+    }
+    div {
+        margin: 9px auto;
+        font-family: "Mukta";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    
+}
+
+.header-animation {
+    height: 50px;
+    animation: height_0  0.3s ease-in-out;
+    z-index: 2;
+}
+
 .product-card {
     width: 312px;
     background-color: #fff;
@@ -119,6 +170,98 @@ ul {
         font-size: 14px;
         line-height: 20px;
         color: #FFB000;
+    }
+}
+
+.product-other__title {
+    padding: 24px 36px 14px;
+    font-family: "Mukta";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 36px;
+}
+
+.swiper-slide {
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 12px 9px 20px 12px;
+
+    &:first-child {
+        margin-left: auto;
+    }
+
+    &:last-child {
+        margin-right: auto;
+    }
+
+    &__like {
+        position: absolute;
+        right: 10px;
+    }
+
+    &__contaner-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        
+    }
+
+    &__title {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+    }
+
+    &__costPC {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        color: #878786;
+    }
+    &__footer-contaner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__button-contaner {
+        display: flex;
+        align-items: center;
+
+        p {
+            font-family: "Noto Sans";
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 20px;
+            color: #FFBC41;
+        }
+        button {
+            margin-left: 10px;
+            width: 24px;
+            height: 24px;
+            border-radius: 19px;
+            border: none;
+            background-color: #FFB000;
+            color: #fff;
+            font-size: 20px;
+            font-family: "sans-serif";
+        }
+    }
+
+    &__cost {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        color: #333;
     }
 }
 
