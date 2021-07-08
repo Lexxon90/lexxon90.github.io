@@ -1,0 +1,24 @@
+// @import "custom";
+// @import "~bootstrap/scss/bootstrap";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #D7D7D7;
+}
+
+.container {
+    background-color: #2D3136;
+    max-width: 1440px;
+}
+.row {
+    border: 1px solid black;
+}
+.icon-img {
+    height: 240px;
+}
+.input {
+    height: 80px;
+    border: 1px solid #D7D7D7;
+}
