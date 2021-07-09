@@ -7,28 +7,69 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <img class="logo-img" src="img/logo.png" alt="logo">
-            <img class="icon-img" src="img/ContactIcon.png" alt="ContactIcon">
-            
-            <div class="row justify-content-center">
-                <div class="col-5">
-                  <div class="row">
-                    <div>Имя</div>
-                    <input class="input" type="text">
-                  </div>
-                  <div class="row">
-                    <div>E-mail</div>
-                    <input class="input" type="text">
-                  </div>
-                </div>
-                <div class="col-5 offset-md-1">
-                    <div>Комментарий</div>
-                    <input type="text">
+    <div class="container-fluid gx-0">
+        <header class="header">
+            <!-- Логотип сайта HoneyHunter -->
+            <div class="header__logo row">
+              <img class="col-3" src="img/logo.png" alt="logo">
+            </div>
+            <!-- Иконка с конвертом -->
+            <div class="header__icon row justify-content-center">
+              <img class="col-3" src="img/ContactIcon.png" alt="ContactIcon">
+            </div>
+            <!-- Строка с текстом -->
+            <div class="row gx-0">
+              <p class="col-6 text">Имя</p>
+              <p class="col-6 text">Комментарий</p>
+            </div>
+            <!-- Строка с формой -->
+            <div class="form row gx-0">
+              <div class="form__input col-5">
+                <input class="input" type="text">
+                <div>
+                  <p class="text">E-mail</p>
+                  <input class="input" type="text">
                 </div>
               </div>
+              <div class="form__input col-5 offset-md-1">
+                <input class="input comment" type="text">
+              </div>
+            </div>
+            <!-- Строка с кнопкой -->
+            <div class="form__button row gx-0">
+              <button class="col-2 offset-md-9">Записать</button>
+            </div>
         </header>
+        <main class="main">
+          <p class="main__text text">Выводим комментарии</p>
+          <div class="row  gx-4">
+            <div class="col-4 comment-item gx-5">
+              <div class="comment-item__name">Вася</div>
+              <div class="comment-item__email">lexxon90@yandex.ru</div>
+              <div class="comment-item__text">massage one</div>
+            </div>
+            <div class="col-4 comment-item  gx-5">
+              <div class="comment-item__name">Вася</div>
+              <div class="comment-item__email">lexxon90@yandex.ru</div>
+              <div class="comment-item__text">massage one</div>
+            </div>
+            <div class="col-4 comment-item  gx-5">
+              <div class="comment-item__name">Вася</div>
+              <div class="comment-item__email">lexxon90@yandex.ru</div>
+              <div class="comment-item__text">massage one</div>
+            </div>
+            <div class="col-4 comment-item  gx-5">
+              <div class="comment-item__name">Вася</div>
+              <div class="comment-item__email">lexxon90@yandex.ru</div>
+              <div class="comment-item__text">massage one Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+            </div>
+            <div class="col-4 comment-item  gx-5">
+              <div class="comment-item__name">Вася</div>
+              <div class="comment-item__email">lexxon90@yandex.ru</div>
+              <div class="comment-item__text">massage one</div>
+            </div>
+          </div>
+        </main>
         
       </div>
     
