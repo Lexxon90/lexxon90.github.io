@@ -11,7 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "@popperjs/core": "^2.9.2",
-    "bootstrap": "^5.0.2"
+    "bootstrap": "^5.0.2",
+    "just-validate": "^1.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",

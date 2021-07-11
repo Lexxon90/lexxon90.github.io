@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Document</title>
 </head>
 <body>
@@ -18,32 +19,37 @@
               <img class="col-3" src="img/ContactIcon.png" alt="ContactIcon">
             </div>
             <!-- Строка с текстом -->
-            <div class="row gx-0">
+            <div class="row gx-0 text-contaner">
               <p class="col-6 text">Имя</p>
-              <p class="col-6 text">Комментарий</p>
+              <p class="col-6 text text-comment">Комментарий</p>
             </div>
             <!-- Строка с формой -->
-            <div class="form row gx-0">
-              <div class="form__input col-5">
-                <input class="input" type="text">
-                <div>
-                  <p class="text">E-mail</p>
-                  <input class="input" type="text">
+            <form class="valid-form" action="" onsubmit="return false">
+              <div class="form row gx-0">
+                <div class="form__input col-md-5">
+                  <div class="form__input-container">
+                    <input class="input-name input" type="text" data-validate-field="name">
+                  </div>
+                  <div class="form__input-container">
+                    <p class="text">E-mail</p>
+                    <input class="input-email input" type="email" data-validate-field="email">
+                  </div>
+                </div>
+                <div class="form__input form__input-container col-md-5 offset-md-1">
+                  <p class="col-6 text text-comment-mobile">Комментарий</p>
+                  <textarea class="input comment" data-validate-field="textarea"></textarea>
                 </div>
               </div>
-              <div class="form__input col-5 offset-md-1">
-                <input class="input comment" type="text">
+              <!-- Строка с кнопкой -->
+              <div class="form__button row gx-0">
+                <button class="col-2 offset-9">Записать</button>
               </div>
-            </div>
-            <!-- Строка с кнопкой -->
-            <div class="form__button row gx-0">
-              <button class="col-2 offset-md-9">Записать</button>
-            </div>
+            </form>
         </header>
         <main class="main">
           <p class="main__text text">Выводим комментарии</p>
-          <div class="row  gx-4">
-            <div class="col-4 comment-item gx-5">
+          <div class="main__comment row  gx-4">
+            <!-- <div class="col-4 comment-item gx-5">
               <div class="comment-item__name">Вася</div>
               <div class="comment-item__email">lexxon90@yandex.ru</div>
               <div class="comment-item__text">massage one</div>
@@ -67,11 +73,24 @@
               <div class="comment-item__name">Вася</div>
               <div class="comment-item__email">lexxon90@yandex.ru</div>
               <div class="comment-item__text">massage one</div>
-            </div>
+            </div> -->
           </div>
         </main>
-        
+        <footer class="footer">
+          <img class="col-2" src="img/logo.png" alt="logo">
+          <div class="social">
+            <div class="social__img">
+              <img class="social__vk" src="img/vk.png" alt="vk">
+            </div>
+            <div class="social__img">
+              <img class="social__fb" src="img/fb.png" alt="fb">
+            </div>
+            
+            
+          </div>
+        </footer>
       </div>
     
 </body>
 </html>
+<!-- <script src="..\node_modules\just-validate\dist\js/just-validate.min.js"></script> -->

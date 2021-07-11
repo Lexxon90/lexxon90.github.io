@@ -29,17 +29,36 @@
     border: 1px solid #D7D7D7;
     background-color: #2D3136;
     border-radius: 10px;
+    font-size: 3vw;
+}
+
+button {
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .form {
+    
     &__input {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
     }
     &__button {
-        margin-top: 2vw;
+        margin-top: 4vw;
+        
     }
+    &__input-container {
+        position: relative;
+    }
+}
+
+.js-validate-error-label {
+    position: absolute;
+    bottom: -2vw;
+    right: 1vw;
+    font-size: 1vw;
 }
 
 .text {
@@ -47,6 +66,7 @@
 }
 .comment {
     height: 16vw;
+    resize: none;
 }
 
 button {
@@ -69,6 +89,10 @@ button {
     }
 }
 
+.text-comment-mobile {
+    display: none;
+}
+
 .comment-item {
     text-align: center;
     font-size: 2vw;
@@ -88,8 +112,8 @@ button {
         color: #6D737B;
     }
     &__text {
-        padding-left: 1vw;
-        padding-right: 1vw;
+        padding-left: 5vw;
+        padding-right: 5vw;
         background-color: #E9EEF3;
         height: 15vw;
         overflow: hidden;
@@ -106,4 +130,55 @@ button {
     }
 }
 
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2vw;
 
+    img {
+        object-fit: contain;
+    }
+
+}
+
+.social {
+    display: flex;
+
+    &__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 4vw;
+        height: 4vw;
+        border: 3px solid #37414E;
+        border-radius: 50%;
+        
+        &:not(:first-child) {
+            margin-left: 3vw;
+        }
+    }
+    &__vk {
+        width: 2vw;
+    }
+    &__fb {
+        width: 1vw;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .text-comment {
+        display: none;
+    }
+
+    .text-comment-mobile {
+        display: block;
+        margin-top: 2vw;
+    }
+
+    .js-validate-error-label {
+        bottom: -3vw;
+        font-size: 3vw;
+    }
+
+}
