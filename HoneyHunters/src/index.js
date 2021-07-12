@@ -4,7 +4,7 @@ import './just-validate.min.js'
 
 let mainContaner = document.querySelector(".main__comment");
 
-fetch("http://localhost:8080/src/comment.json")
+fetch("https://lexxon90.github.io/HoneyHunters/package.json")
     .then(function (response) {
         return response.json();
     })
@@ -52,9 +52,25 @@ new JustValidate('.valid-form', {
         maxLength: 100
       }
     },
+    messages: {
+      name: {
+        required: 'Поле обязательное для заполнения',
+        minLength: 'Поле должно содержать минимум 2 символа',
+        maxLength: 'Поле должно содержать не больше 20 символов'
+      },
+      email: {
+        required: 'Поле обязательное для заполнения',
+        email: 'Поле не соответсвтует формату email'
+      },
+      textarea: {
+        required: 'Поле обязательное для заполнения',
+        minLength: 'Поле должно содержать минимум 2 символа',
+        maxLength: 'Поле должно содержать не больше 100 символов'
+      },
+    },
     submitHandler: function() {
         let contanerItem = document.createElement("div");
-        contanerItem.className = "col-4 comment-item gx-5";
+        contanerItem.className = "col-6 col-md-4 comment-item gx-md-5";
 
         let itemName = document.createElement("div");
         itemName.className = "comment-item__name";

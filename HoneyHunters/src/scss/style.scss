@@ -30,6 +30,14 @@
     background-color: #2D3136;
     border-radius: 10px;
     font-size: 3vw;
+    &:active {
+        border: 1px solid #BE393B;
+        outline: none;
+    }
+    &:focus {
+        border: 1px solid #BE393B;
+        outline: none;
+    }
 }
 
 button {
@@ -156,6 +164,9 @@ button {
         &:not(:first-child) {
             margin-left: 3vw;
         }
+        &:hover {
+            background-color: #fff;
+        }
     }
     &__vk {
         width: 2vw;
@@ -179,6 +190,14 @@ button {
     .js-validate-error-label {
         bottom: -3vw;
         font-size: 3vw;
+    }
+
+    .text-email {
+        margin-top: 2vw;
+    }
+
+    .input {
+        margin-bottom: 1vw;
     }
 
 }
