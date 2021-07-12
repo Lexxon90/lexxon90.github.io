@@ -4,7 +4,7 @@ import './just-validate.min.js'
 
 let mainContaner = document.querySelector(".main__comment");
 
-fetch("https://lexxon90.github.io/HoneyHunters/package.json")
+fetch("https://lexxon90.github.io/HoneyHunters/src/comment.json")
     .then(function (response) {
         return response.json();
     })
