@@ -71,6 +71,12 @@ button {
 
 .text {
     font-size: 3vw;
+
+    &::after {
+        content: "*";
+        color: #BE393B;
+
+    }
 }
 .comment {
     height: 16vw;
