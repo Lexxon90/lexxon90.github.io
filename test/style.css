@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* --transition-square-h: 100px; */
+    /* --transition-square-w: 500px; */
 }
 
 .contaner {
@@ -10,6 +12,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    overflow: hidden;
 }
 
 .contaner-first {
@@ -28,28 +31,83 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transition: all 2s ease-in-out;
-    
     background-color: red;
 }
 
-.square_1 {
-
+.square-position-1 {
     margin-top: -125px;
     margin-left: -125px;
+}
+.square-position-2 {
+    margin-top: -125px;
+}
+.square-position-3 {
+    margin-left: -125px;
+}
 
-    transform: translate(-500px,-100px);
+.square_1 {
+    transform: translate(calc(var(--transition-square-w)*(-1)),calc(var(--transition-square-h)*(-1)));
 }
 .square_2 {
-    margin-top: -125px;
-
-    transform: translate(500px,-100px);
+    transform: translate(var(--transition-square-w),calc(var(--transition-square-h)*(-1)));
 }
 .square_3 {
-    margin-left: -125px;
-
-    transform: translate(-500px,100px);
+    transform: translate(calc(var(--transition-square-w)*(-1)),var(--transition-square-h));
 }
 .square_4 {
-    transform: translate(500px,100px);
+    transform: translate(var(--transition-square-w),var(--transition-square-h));
 }
+
+.contaner-two {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.button {
+    cursor: pointer;
+    display: none;
+    /* opacity: 0; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -42px;
+    margin-left: -45px;
+    border-radius: 50%;
+    padding: 34px 20px;
+    border-top: 2px solid red;
+    border-bottom: 2px solid red;
+    border-left: 2px solid green;
+    border-right: 2px solid green;
+    transition: transform 2s linear;
+    transform: rotate(180deg);
+    background-color: red;
+    
+}
+
+.contaner-three {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.form {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -3%;
+    margin-left: -12%;
+}
+
+.select {
+    width: 50%;
+    height: 10%;
+    margin-bottom: 2%;
+}
+
