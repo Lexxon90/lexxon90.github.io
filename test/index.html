@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="index.js" defer></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -21,19 +24,16 @@
         </div>
         <div class="contaner-three">
             <form class="form" action="">
-                <select class="select">
-                    <option>Пункт 1</option>
-                    <option>Пункт 2</option>
+                <select class="select mark">
+                    <option>Выберите марку авто</option>
                 </select>
-                <select class="select">
+                <select class="select model">
                     <option>Выберите предыдущий пункт</option>
                 </select>
-                <select class="select">
+                <select class="select year">
                     <option>Выберите предыдущий пункт</option>
                 </select>
-                <select class="select">
-                    <option>Выберите предыдущий пункт</option>
-                </select>
+                <input class="select delivery" type="text" id="datepicker"></input>
             </form>
             
         </div>
