@@ -5,10 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    
     <script src="index.js" defer></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -25,19 +23,28 @@
         <div class="contaner-three">
             <form class="form" action="">
                 <select class="select mark">
-                    <option>Выберите марку авто</option>
+                    <option class="mark-option-prev">Выберите марку авто</option>
                 </select>
-                <select class="select model">
-                    <option>Выберите предыдущий пункт</option>
+                <select class="select model" disabled>
+                    <option class="model-option-prev">Выберите предыдущий пункт</option>
                 </select>
-                <select class="select year">
-                    <option>Выберите предыдущий пункт</option>
+                <select class="select year" disabled>
+                    <option class="year-option-prev">Выберите предыдущий пункт</option>
                 </select>
-                <input class="select delivery" type="text" id="datepicker"></input>
-            </form>
+                <input type="button" class="delivery" type="text" id="datepicker" value="Доставить"></input>
+            </form>    
+        </div>
+        <div class="contaner-four">
+            <div class="result">
+                <div class="text">техт</div>
+                <button class="replay">Начать заново</button>
+            </div>
             
         </div>
     </div>
     
 </body>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </html>
