@@ -248,3 +248,6 @@ document.querySelector('.replay').addEventListener('click', ()=>{
     setTimeout(function(){start()},1000);
 })
 
+
+  
+  
