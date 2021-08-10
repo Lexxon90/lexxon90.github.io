@@ -638,29 +638,57 @@ main a {
     }
 
     .address__btn {
-        margin-top: 36px;
+        margin-top: 76px;
 
     }
 
-    .address__active .address__btn {
-        margin-top: 30px;
+    .address__cont{
+        display:flex;
+        flex-direction: column-reverse;
     }
-
+    
     .address__link {
         display: inline-block;
         margin-left: 0;
-        font-size: 12px;
-        line-height: 16px;
+        font-size: 18px;
+        line-height: 26px;
+        text-transform: inherit;
+        padding-bottom: 2px;
+        font-weight: normal;
+
     }
+
+    .address__map-link {
+        display: block;
+        margin-top: 11px;
+        font-family: "Open Sans";
+        font-size: 14px;
+        line-height: 19px;
+        text-transform: uppercase;
+        color: #23BD87;
+    }
+
     .address__container {
         width: 100%;
+    }
+    .address__title {
+        width: 300px;
+        margin-top: 12px;
     }
 
     .address__col {
         position: relative;
     }
+
+    .address__col:first-child {
+        margin-bottom: 50px;
+        padding-bottom: 0;
+    }
+
     .address__contaner-link {
-        display: none;
+        position: absolute;
+        bottom: -190px;
+        display: block;
     }
     .address__active .address__contaner-link {
         display: block;
@@ -668,7 +696,7 @@ main a {
         bottom: -110px;
     }
     .map {
-        display: flex;
+        display: none;
         flex-direction: column;
     }
     .map__contaner-link {

@@ -30,29 +30,20 @@ btnUp.addEventListener('click',()=>{
     document.documentElement.scrollTop = 0;
 })
 
-// Выбор города
-if (window.innerWidth < 426) {
-    let addressLink = document.querySelector('.address__link');
-    let map = document.querySelector('.map');
-    if (addressLink.textContent == "Сменить город") {
-        map.style.display = 'block';
-        document.querySelector('.address__container').classList.remove('address__active');
-        document.querySelector('.address__cont').classList.remove('address__active');
-        document.querySelector('.address__map-link').style.display = "none";
-    }
-    else {
-        let addressConteiner = document.querySelector('.address__cont');
-        addressConteiner.classList.add('active');
-        document.querySelector('.address__container').classList.add('address__active');
-        document.querySelector('.address__cont').classList.add('address__active');
-        map.style.display = 'none';
-    }
+// Кнопка "Смотреть на карте" в мобильной версии сайта
 
-    document.querySelector('.address__map-link').addEventListener('click', ()=>{
-        map.style.display = 'block';
-        document.querySelector('.address__map-link').style.display = 'none';
-    })
+if (window.innerWidth < 426) {
+    document.querySelector('.address__link').textContent = `г. ${document.querySelector('.active').textContent.toUpperCase()}`
 }
+
+let mapLink = document.querySelector('.address__map-link')
+mapLink.addEventListener('click', ()=>{
+    mapLink.style.display = "none";
+    document.querySelector('.map').style.display = "flex";
+    document.querySelector('.address__contaner-link').style.display = "none";
+    document.querySelector('.address__btn').style.marginTop = "30px";
+
+})
 
 
 
